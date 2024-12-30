@@ -37,10 +37,10 @@ def generate_books_csv(n):
             "name": " ".join(
                 random.sample(
                     book_name_words,
-                    k=random.randint(2, 5),
+                    k=random.randint(2, 3),
                 )
             ),
-            "author": f"Author {random.choice(first_names)} {random.choice(last_names)}",
+            "author": f"{random.choice(first_names)} {random.choice(last_names)}",
             "publish": random.choice(publishers_names),
             "ISBN": f"{random.randint(1000000000, 9999999999)}",
             "language": random.choice(

@@ -1,101 +1,101 @@
 book_id,name,author,publish,ISBN,language,price,pub_date,class_id,quantity
-2,Serpent Storm Moon,Author Zachary Richards,TarcherPerigee,8641074907,French,187.65,1969-01-22,7,5
-3,Soul Moon,Author Olivia Kelly,BeaconPress,9315817160,Chinese,95.98,1961-11-04,1,10
-4,Edge Ashes,Author Gemma Oliver,AlgonquinBooks,3403320153,Spanish,68.08,1945-08-11,10,2
-5,Veins Horizon,Author Ryan Roberts,Routledge,7580016330,Chinese,37.53,1988-03-20,2,10
-6,Horizon Soul,Author Gemma Fisher,Macmillan,4901819299,English,88.39,1980-02-29,6,18
-7,Dawn Flame Horizon,Author Phoebe Campbell,BluebirdBooks,3721175131,French,144.79,1940-08-19,9,17
-8,Moon Heart Silence,Author Katie Brooks,Macmillan,3722591444,Chinese,143.74,1951-02-20,7,10
-9,Rift Storm,Author Benjamin Fisher,PenguinRandomHouse,6906109100,Spanish,136.38,2014-06-05,3,16
-10,Serpent Betrayal,Author Maria Green,BluebirdBooks,2048645123,Russian,167.82,1943-08-28,10,11
-11,Veil Serpent Sins Rising Whisper,Author Victor Lee,StMartinsPress,3555214234,French,77.42,2019-02-02,7,14
-12,Path Whisper Mirror Bound,Author Zoe Hill,Pearson,7451155071,Chinese,11.34,1950-07-11,9,4
-13,Awakening Memory Lost Embrace Veil,Author Katie Van Dyke,CityLights,4060853191,English,142.26,1911-05-15,3,1
-14,Thorns Legacy,Author Finn Van Dyke,FlatironBooks,4929952201,French,16.21,2010-12-05,11,3
-15,Ghosts Journey Shadows Thorns Horizon,Author Clara Van Dyke,Wiley,5323268028,Chinese,79.05,1983-08-02,7,3
-16,Mirror Moon Fire,Author Grace Clark,Liveright,1999369726,English,89.74,1957-12-01,7,4
-17,Mirror Echo Moon,Author Xavier Edwards,HarperCollins,7364280556,French,107.98,2002-09-22,8,3
-18,Dawn Tempest Echoes Nightfall,Author Noah Lewis,NewDirections,5753187268,Spanish,109.61,1912-01-17,7,13
-19,Rift Soul Shadows Truth,Author Brian Xander,UniversityPress,4810517778,Russian,42.19,2015-12-16,1,13
-20,Silence Heart,Author Zoe Vaughn,ChronicleBooks,7927016058,Chinese,29.58,1903-10-22,11,15
-21,Storms Serpent Ashes Embrace Bound,Author Emma Xu,Scholastic,6061228419,Chinese,60.83,1995-03-01,4,1
-22,Dream Horizon Heart Moon,Author Katie Hill,AlgonquinBooks,9948677372,Russian,24.54,2016-09-28,6,11
-23,Rebirth Lost Phoenix Serpent,Author Olivia Nelson,UniversityPress,8168105109,Russian,47.12,1926-09-21,6,6
-24,Tempest Moon Echo,Author Hugo Richards,NewDirections,3786018669,French,36.05,2004-08-09,8,15
-25,Horizon Tempest Journey,Author Hugo Miller,Macmillan,5058026730,French,77.65,1969-12-16,3,8
-26,Dawn Echo Ghosts Ashes,Author Ethan Oliver,Zondervan,8758767171,Spanish,82.75,1959-03-22,5,6
-27,Rift Memory Silence,Author Jake Underwood,Liveright,2821916313,Chinese,96.32,1978-02-19,5,8
-28,Dream Horizon,Author Alice Quinn,Liveright,7057784535,Chinese,56.01,1902-08-31,9,1
-29,Echo Path Edge Whisper Blood,Author Ivy Underwood,SealPress,5659444127,Chinese,27.21,2024-08-12,2,10
-30,Embrace Rising Serpent Lost,Author Rachel O'Connor,Knopf,4496591380,Chinese,101.9,1952-02-17,5,19
-31,Awakening Path,Author Finn Zimmerman,HarvardPress,5341968764,English,93.25,1954-03-15,6,9
-32,Wings Light Legacy,Author Clara Hill,Penguin,4900628491,Chinese,63.87,1988-03-19,5,17
-33,Fate Infinity Soul Legacy Edge,Author Ethan Martin,NewDirections,9861460225,Chinese,128.52,2001-03-04,6,15
-34,Mirror Silence Rebirth Echoes Rising,Author Wendy Thompson,PrincetonPress,3123214915,Spanish,178.49,1997-07-01,2,20
-35,Rising Infinity Moon Thorns,Author Charlotte Underwood,Scholastic,1625721803,Spanish,157.14,1910-07-05,4,5
-36,Ashes Fate Bound,Author Charlotte Anderson,NewDirections,2891934788,Russian,194.86,1980-07-02,4,10
-37,Blood Thorns Kingdom Infinity Phoenix,Author Zachary Green,PrincetonPress,1494465771,Russian,19.24,1902-05-28,1,7
-38,Storms Dream Embrace Truth Soul,Author Yvonne Xander,TorBooks,6936774933,French,17.71,1917-06-27,2,16
-39,Edge Secrets Flame,Author Zachary Foster,TorBooks,3251105552,Chinese,140.49,1938-02-06,7,15
-40,Storm Thorns Secrets,Author Rachel Anderson,SealPress,3478787599,Chinese,92.8,1957-06-15,5,12
-41,Phoenix Infinity Storm,Author Owen White,SealPress,1110909164,English,80.29,2019-06-03,8,9
-42,Fate Shadows Tempest,Author Zoe Lewis,AlgonquinBooks,7628391758,French,183.42,2005-01-26,4,20
-43,Mirror Sins Rift Fire,Author Liam Newton,StMartinsPress,8199024453,Chinese,32.19,1972-10-30,3,3
-44,Lost Truth Memory Embrace,Author Mia Richards,Routledge,2254822267,French,18.58,1959-03-06,8,8
-45,Embrace Mirror Whisper Flame,Author Daniel Nelson,AcornPress,1397514027,English,186.4,1908-09-21,10,14
-46,Flame Echoes Ashes Moon,Author Jake Taylor,Penguin,4206591932,Spanish,186.05,1942-03-15,6,12
-47,Tempest Path Rebirth Rift Dream,Author Lucas Brooks,Sourcebooks,6616272782,Russian,151.93,1988-05-03,10,1
-48,Phoenix Legacy Journey Betrayal Legacy,Author Alice Foster,HarvardPress,4563340024,Chinese,131.23,2013-07-04,2,20
-49,Soul Serpent Heart Moon Mirror,Author Noah Grant,RowmanLittlefield,9956280521,Spanish,17.83,1975-11-28,5,4
-50,Whisper Rain Thorns Fate Awakening,Author Liam Underwood,Scribner,3645995914,English,116.83,1932-03-27,11,20
-51,Shadows Rain Silence Wings,Author Grace Stevens,Routledge,9516613371,Russian,100.46,2019-08-12,8,2
-52,Betrayal Lost Moon Tempest,Author Yvonne Stevens,HarperCollins,1076018958,Spanish,36.82,1993-10-20,9,4
-53,Moon Infinity Awakening Betrayal Secrets,Author Daniel Edwards,PlumeBooks,1086311322,Russian,42.51,1978-10-31,11,6
-54,Lost Legacy Veil Bound,Author David Jackson,Penguin,3857517743,Chinese,157.63,1907-12-11,1,12
-55,Secrets Rain Journey Moon Tempest,Author Grace Stevens,Oxford,3033634538,Spanish,34.75,1996-02-11,1,19
-56,Silence Horizon Awakening Nightfall Embrace,Author Ursula Thompson,Abrams,1946515116,English,38.43,2023-06-29,9,5
-57,Legacy Fate Ashes Tempest Horizon,Author Frederick Adams,FlatironBooks,3268755924,Chinese,136.57,1938-02-25,6,18
-58,Moon Soul Sins Veil,Author Violet King,Pearson,3584754304,Spanish,107.36,1911-07-10,10,9
-59,Echoes Mirror,Author Brian O'Connor,AcornPress,4126131482,French,184.63,1947-07-04,7,6
-60,Wings Legacy Veil Infinity Blood,Author Olivia Walker,HarperCollins,6744672709,Russian,132.75,1922-06-14,6,4
-61,Legacy Shadows Legacy Sins Bound,Author Grace Quinn,TarcherPerigee,8542637938,French,169.49,1960-01-23,3,13
-62,Ghosts Betrayal Kingdom,Author Benjamin Anderson,StMartinsPress,5192652314,French,110.27,1972-02-24,4,12
-63,Phoenix Storms Storm Serpent Path,Author Mia Brooks,EccoPress,4674287759,Chinese,165.58,1967-04-11,11,8
-64,Flame Blood Heart,Author Samuel Lee,Abrams,3587964439,French,169.63,1939-01-21,2,17
-65,Rebirth Whisper,Author Clara Adams,TorBooks,7478481303,Spanish,156.82,1937-07-07,4,10
-66,Ghosts Fire,Author Ava Newton,HaymarketBooks,8352360270,Chinese,147.07,1900-02-27,6,10
-67,Mirror Soul Secrets Veil Fire,Author Frederick Peterson,PenguinRandomHouse,6786068358,Russian,74.5,1996-06-14,11,18
-68,Fate Bound Sins Rain,Author Violet Parker,PenguinRandomHouse,7661648331,Chinese,47.78,1957-06-24,8,9
-69,Sins Dream,Author Nathan Underwood,TarcherPerigee,5948574156,French,31.24,1989-10-23,11,16
-70,Ashes Lost Path Nightfall,Author Lucas Underwood,EccoPress,4587335212,French,86.51,2008-01-03,10,10
-71,Horizon Dream Dawn,Author Jack Quinn,StMartinsPress,3873255170,French,72.72,1932-11-23,1,14
-72,Lost Bound Storm Legacy,Author Daniel Zimmerman,Sourcebooks,7268487634,English,111.58,1987-12-19,11,16
-73,Rising Secrets,Author Noah Kelly,Macmillan,2188835087,Russian,111.8,1952-12-13,2,9
-74,Nightfall Veil Mirror,Author Isabella Edwards,StMartinsPress,8035202570,Russian,189.19,1974-05-14,11,7
-75,Veins Wings,Author Wendy Miller,StMartinsPress,6246645229,French,133.12,1962-01-11,8,5
-76,Light Ghosts Secrets,Author Zoe Newton,EccoPress,8522700861,Spanish,55.64,1962-09-29,9,4
-77,Moon Infinity Kingdom,Author Ivy Van Dyke,ChronicleBooks,1175194278,Chinese,74.11,1978-05-31,10,13
-78,Rain Moon,Author Yvonne Irving,TarcherPerigee,2929826470,French,80.38,1928-02-03,8,17
-79,Tempest Moon,Author Henry O'Connor,PrincetonPress,4600718760,French,64.48,1988-11-02,4,10
-80,Truth Veins,Author Grace Jackson,Wiley,1210970001,Spanish,101.65,1971-05-06,9,10
-81,Shadows Veins,Author Katie Zimmerman,SimonAndSchuster,8166411116,Spanish,54.23,1902-12-23,6,17
-82,Legacy Blood Veins,Author Isabella Lee,RowmanLittlefield,3433937549,Chinese,62.05,1922-03-12,8,15
-83,Fate Rift Legacy,Author Liam White,Macmillan,3594810676,English,86.29,1964-05-30,11,15
-84,Rain Silence,Author Phoebe Newton,HaymarketBooks,9991920822,Spanish,133.34,1902-01-25,6,7
-85,Path Tempest,Author Owen Richards,Routledge,1207031493,French,66.19,2018-05-06,1,18
-86,Serpent Whisper Silence Ashes Lost,Author David Oliver,LittleBrown,7014955481,French,192.03,2018-08-02,8,17
-87,Heart Rain Mirror Thorns Storms,Author Henry Smith,SealPress,2400289094,French,58.0,1986-06-04,5,18
-88,Storm Phoenix Veins,Author Kylie O'Connor,HoughtonMifflin,2714413021,Spanish,88.41,1966-08-24,11,13
-89,Journey Fate,Author Ava Zimmerman,HaymarketBooks,9069310338,Spanish,177.2,1916-05-08,8,14
-90,Legacy Tempest Horizon Silence Rebirth,Author Ivy Taylor,PlumeBooks,1053241115,Chinese,169.15,2008-10-04,6,18
-91,Serpent Dawn Soul,Author Xavier Van Dyke,Scribner,3155844135,French,179.25,1993-12-24,4,11
-92,Serpent Lost Path,Author Henry Clark,Zondervan,8429821987,Chinese,162.28,1961-02-12,9,18
-93,Light Ashes,Author Thomas Thompson,HaymarketBooks,6253186573,English,115.2,1989-02-20,4,20
-94,Soul Rift Ghosts,Author Katie James,HoughtonMifflin,7714210725,Spanish,144.75,1983-08-28,8,3
-95,Lost Horizon Rain Memory,Author Will Martin,SimonAndSchuster,4631175941,Spanish,185.19,1926-11-28,1,9
-96,Edge Fate Legacy Shadows,Author Finn Campbell,HarperCollins,6381660116,English,44.44,1912-07-29,5,2
-97,Horizon Bound Truth,Author Emma Oliver,GreenleafBookGroup,3893727761,Russian,78.47,1920-11-24,10,7
-98,Light Legacy,Author Frederick Stevens,Hachette,3941658085,Russian,137.56,2023-05-31,5,7
-99,Storms Memory Veil Embrace Infinity,Author David King,PenguinRandomHouse,8539570743,Russian,199.92,1957-03-09,9,19
-100,Storms Sins Rain,Author Jake Clark,Penguin,7749032241,French,20.41,2009-07-24,5,3
-101,Veil Embrace Legacy,Author Peter Peterson,HaymarketBooks,6139207632,Spanish,178.22,2014-02-15,8,17
+2,Edge Path,Zoe Van Dyke,BluebirdBooks,1767265421,Spanish,141.44,1951-01-27,8,15
+3,Truth Nightfall Dawn,Lucas Van Dyke,PrincetonPress,8183112147,French,58.99,1969-12-20,9,17
+4,Shadows Storm Ghosts,Gemma Xu,Penguin,8533145402,Russian,146.38,1971-08-03,6,12
+5,Fire Rift,Ivy Evans,WorkmanPublishing,3154143954,English,88.87,1972-05-05,5,18
+6,Rising Infinity Fire,Peter Harris,SkyhorsePublishing,3612984812,English,148.47,1948-05-18,4,14
+7,Embrace Ashes Silence,Nathan Evans,UniversityPress,3563192070,Russian,150.09,2004-07-09,8,6
+8,Dawn Rebirth,Jake Adams,WorkmanPublishing,6880433466,Russian,141.65,1979-07-28,8,16
+9,Moon Serpent Legacy,Kylie Vaughn,Liveright,5419905685,English,89.67,1922-03-08,11,6
+10,Heart Path Rising,Henry Grant,Pearson,1169316208,Chinese,136.6,1922-09-06,11,2
+11,Fire Fate,Grace Miller,Abrams,4519963620,English,47.67,2020-10-02,7,15
+12,Legacy Whisper,Ivy Taylor,TarcherPerigee,5282480964,Spanish,23.64,1924-12-05,8,17
+13,Betrayal Infinity Mirror,Ryan O'Connor,BluebirdBooks,2653112962,Russian,97.81,1945-01-13,1,19
+14,Heart Secrets Memory,Noah Van Dyke,Macmillan,6262693291,French,134.11,1966-11-07,5,13
+15,Light Legacy Awakening,Taylor Xu,KnopfDoubleday,5456167588,Chinese,93.41,1989-12-23,10,20
+16,Thorns Heart Fate,Zoe Xu,PenguinRandomHouse,6375683777,Russian,24.05,2001-03-08,2,14
+17,Storm Wings,Emma Usher,TorBooks,6831394551,Chinese,173.69,1905-04-11,10,8
+18,Nightfall Wings,Brian Van Dyke,FarrarStraus,7447062176,Spanish,33.79,1995-12-21,5,7
+19,Journey Light Whisper,Mia Peterson,FlatironBooks,2939827952,Chinese,168.65,1958-06-17,1,4
+20,Fate Blood Ghosts,Olivia Lee,Abrams,1399790957,Spanish,176.71,2021-09-16,2,5
+21,Memory Silence Storms,Rachel Richards,Hachette,7258396009,English,61.04,2000-05-06,8,10
+22,Embrace Betrayal Ashes,Noah O'Connor,NewDirections,1366555001,French,92.54,1947-05-13,10,14
+23,Mirror Sins Infinity,Eva Davis,CityLights,7542305968,Russian,168.99,1958-07-21,8,14
+24,Fire Phoenix Truth,Nathan King,PenguinRandomHouse,5440891798,Spanish,191.73,1910-12-29,7,3
+25,Infinity Storms,Ava Clark,NewDirections,9910579580,Chinese,115.02,1958-01-07,8,18
+26,Journey Fate Veil,Eva Grant,TorBooks,5431291812,Spanish,72.86,2012-03-17,7,11
+27,Bound Infinity,Finn Smith,Scholastic,4877959124,French,110.98,1972-12-24,6,6
+28,Rebirth Light,Ivy Kelly,UniversityPress,2707359795,Spanish,127.45,1936-10-28,10,8
+29,Truth Phoenix Awakening,Noah Vaughn,Liveright,9255548979,Russian,151.52,1909-04-17,2,15
+30,Light Thorns Sins,Brian Parker,Scribner,7937333051,French,157.3,1955-09-28,4,7
+31,Tempest Awakening Phoenix,Daniel Newton,SimonAndSchuster,8945492837,Chinese,194.77,1983-06-11,7,7
+32,Rebirth Dawn Betrayal,Lucas Martin,UniversityPress,2434040635,Russian,125.33,1950-12-30,9,14
+33,Rain Infinity,Ava Van Dyke,Wiley,3139967549,Russian,142.2,1921-12-28,2,6
+34,Memory Phoenix,Henry Campbell,BerkleyBooks,5273057646,Spanish,195.19,1961-03-14,3,3
+35,Whisper Echo,Zoe Underwood,Knopf,5458864016,French,199.26,1921-04-13,10,7
+36,Mirror Veil,Benjamin Young,Liveright,8473728843,Russian,19.39,2000-11-21,3,2
+37,Secrets Storm Mirror,Hugo Foster,PrincetonPress,7466585923,Chinese,90.58,1985-10-02,3,10
+38,Truth Ashes,Ursula Brown,Pearson,3292535379,Russian,158.45,1969-08-09,3,6
+39,Phoenix Rain,Isabella White,Macmillan,6052776197,French,32.86,1989-03-25,2,20
+40,Kingdom Echoes,Brian Young,KnopfDoubleday,2069320088,Chinese,21.46,2015-01-19,4,19
+41,Rift Heart Blood,Jack Davis,HarperCollins,2702285420,Chinese,199.13,1945-05-10,5,1
+42,Rising Soul Light,Henry Vaughn,ChronicleBooks,5453487870,French,132.34,1993-07-13,11,4
+43,Dream Thorns,Charlotte Miller,Pearson,7019431347,English,88.2,1974-08-09,5,11
+44,Shadows Phoenix,Emma Xu,SimonAndSchuster,1668134099,Chinese,42.43,2011-12-17,11,12
+45,Nightfall Horizon,Henry O'Connor,FarrarStraus,7127403857,French,123.57,1955-09-06,3,16
+46,Moon Dawn,Mia Brooks,HoughtonMifflin,6426719848,English,51.04,1946-12-31,7,4
+47,Dawn Echoes,Rachel James,Scribner,1933750906,Russian,195.21,1903-01-10,6,4
+48,Flame Heart,Liam Daniels,Scribner,3004061619,Russian,85.29,1994-08-31,2,11
+49,Lost Kingdom Mirror,Henry Martin,Wiley,7526381901,Russian,45.59,2003-12-25,7,8
+50,Truth Kingdom,Yvonne Ingram,BluebirdBooks,8299649424,Chinese,161.75,1964-06-08,3,1
+51,Ashes Veins,Liam Vaughn,GreenleafBookGroup,8129742562,French,72.11,1941-03-27,3,19
+52,Ashes Legacy Path,Ava Green,CityLights,3786986039,Russian,87.68,1947-12-29,6,7
+53,Path Thorns,Liam Walker,Scribner,4593740714,Spanish,120.27,1907-02-19,9,7
+54,Memory Echo,Jack Lee,Scribner,6081519268,English,182.07,1956-03-26,2,15
+55,Phoenix Light Flame,Olivia Jackson,GreenleafBookGroup,5055086121,French,98.7,1962-03-05,11,7
+56,Betrayal Shadows,Emma Evans,RandomHouse,3792045406,English,141.63,1931-09-04,11,7
+57,Soul Memory,Daniel Parker,TyndaleHouse,8107205967,French,130.88,1910-11-21,2,8
+58,Infinity Wings,Mia Nelson,AcornPress,9034069346,Spanish,94.9,2021-01-04,8,13
+59,Storms Moon Phoenix,Sophia Lee,TyndaleHouse,9239569602,Spanish,194.6,1934-09-23,7,10
+60,Nightfall Tempest,Ivy Ingram,BluebirdBooks,7792620691,Russian,127.27,1926-12-24,8,18
+61,Whisper Blood,Peter Parker,Macmillan,3390202203,Chinese,38.93,1936-10-02,8,19
+62,Dawn Storms Sins,Emma Yates,BeaconPress,4917054529,Russian,88.96,1941-08-31,7,3
+63,Dawn Sins,Ava Miller,AcornPress,8710516828,Spanish,146.79,2024-12-17,11,14
+64,Sins Veins,Violet Adams,HoughtonMifflin,5606153312,Chinese,190.21,1920-01-03,5,13
+65,Path Mirror,Emma Thompson,ChronicleBooks,4923337425,Russian,86.56,1934-07-10,8,8
+66,Rising Lost Veil,Una Smith,SkyhorsePublishing,5541251775,Chinese,183.28,1996-12-07,1,17
+67,Shadows Ashes,Hugo Richards,Scribner,2636565134,English,35.62,1958-08-24,4,9
+68,Moon Rising Secrets,Noah Clark,FlatironBooks,5884806870,Russian,77.39,1910-05-03,8,1
+69,Horizon Veins Wings,Zachary King,Pearson,8687571621,Chinese,53.9,1983-07-09,5,10
+70,Rebirth Rain Lost,Brian Thompson,SealPress,6284316976,French,111.83,1950-01-08,7,5
+71,Lost Dream Horizon,Ivy Miller,HaymarketBooks,3936560401,Spanish,104.49,1930-10-08,11,12
+72,Dawn Edge Wings,Alice Underwood,Knopf,3774675200,Chinese,175.57,1951-08-04,8,3
+73,Dawn Flame Secrets,Katie Richards,HarperCollins,9146094714,French,76.73,1966-04-04,2,5
+74,Soul Rain Edge,Katie Stevens,RandomHouse,1729154660,Spanish,33.06,1937-01-09,8,2
+75,Awakening Storm,Ethan Adams,WorkmanPublishing,3200916939,Spanish,184.11,1965-12-21,7,10
+76,Edge Phoenix Fate,Gemma Brown,EccoPress,1424217080,Spanish,189.97,1955-10-02,8,8
+77,Embrace Heart,Nathan Roberts,TyndaleHouse,7757212595,English,75.85,1993-06-04,10,17
+78,Path Veil,Una Brooks,TyndaleHouse,3997467024,English,158.35,1959-09-04,7,1
+79,Veins Dream Fire,Noah Adams,RowmanLittlefield,3615558123,English,16.57,1975-06-20,7,11
+80,Rising Rain Dream,Owen Irving,HoughtonMifflin,6153202131,Spanish,110.46,1900-11-15,2,17
+81,Lost Storm Rift,Finn Martin,Doubleday,6333770523,Russian,28.04,1913-08-07,8,16
+82,Nightfall Rising Rift,Charlotte Grant,BerkleyBooks,8665999792,English,14.76,1993-05-29,4,8
+83,Betrayal Heart Rebirth,Kylie Nelson,TarcherPerigee,2474835372,Chinese,101.06,1916-05-17,6,4
+84,Blood Shadows Storm,Una Kelly,HoughtonMifflin,4206268742,Spanish,147.19,1973-11-09,6,7
+85,Secrets Flame Dawn,Alice Parker,AcornPress,2812633107,French,68.57,1938-11-30,11,12
+86,Secrets Truth Phoenix,Jack Quinn,ChronicleBooks,9752544623,French,45.13,1961-06-02,4,15
+87,Veins Phoenix Echo,Brian Grant,TorBooks,9595746607,Chinese,87.56,1980-04-08,8,17
+88,Mirror Wings Lost,Phoebe Anderson,Pearson,3460838464,Spanish,27.34,2011-09-05,10,7
+89,Lost Veil Fire,Maria Peterson,BeaconPress,1607983781,Chinese,43.72,1967-08-04,5,12
+90,Awakening Storm,Grace King,AcornPress,9294792646,Chinese,20.95,1972-08-12,3,18
+91,Silence Betrayal,Owen Martin,LittleBrown,9112213657,Chinese,27.19,2002-06-09,8,20
+92,Whisper Sins,Hugo Quinn,LittleBrown,3878936592,English,177.55,1903-06-18,9,17
+93,Legacy Horizon,Clara Martin,RegneryPublishing,5747535936,Spanish,141.1,1931-08-02,9,17
+94,Veil Flame Bound,Taylor Walker,RandomHouse,5086075806,Spanish,79.98,1901-02-16,7,8
+95,Rebirth Phoenix Flame,Benjamin Underwood,SealPress,5466953799,French,29.68,1939-05-06,6,10
+96,Storms Rain,Ivy Newton,Oxford,2241872241,French,74.45,1922-12-14,6,20
+97,Blood Echo,Finn Lee,CityLights,8789332291,French,98.41,2007-02-25,9,9
+98,Memory Moon Serpent,Kylie Martin,Wiley,2825074230,Russian,60.81,1954-10-08,5,1
+99,Infinity Nightfall,Victor Parker,PrincetonPress,5858095084,French,108.39,1938-10-24,3,6
+100,Silence Secrets Veil,Alice Foster,PlumeBooks,5642506287,Spanish,177.99,2012-04-19,8,13
+101,Awakening Lost Rift,Olivia Smith,RandomHouse,9076758474,Spanish,136.53,1943-09-03,1,7

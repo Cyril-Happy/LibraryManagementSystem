@@ -6,7 +6,8 @@
 #include "LendManager.h"
 
 // Manages admin functionalities such as book, reader, and lend management
-class AdminManager {
+class AdminManager
+{
 private:
     BookManager bookManager;
     ReaderManager readerManager;
@@ -17,6 +18,7 @@ public:
     ~AdminManager();
 
     // Book management
+    void loadBookData();
     void addBook();
     void deleteBook();
     void searchBooks();
@@ -27,8 +29,9 @@ public:
     void deleteReader();
     void searchReaders();
     void printReaders();
-
-    // Lend logs
+    // Lend management
+    void lendBook();
+    void returnBook();
     void viewLogs();
 };
 

@@ -6,7 +6,8 @@
 // Provides the main menu for the system
 class Menu {
 private:
-    bool adminLoggedIn;
+    bool isLoggedIn;
+    bool isAdmin;
     AdminManager adminManager;
 
 public:
@@ -15,6 +16,7 @@ public:
 
     // Shows the main menu
     void displayMainMenu();
+    void switch_based_on_role(int &choice);
 
     // Admin login and logout
     void login();

@@ -1,8 +1,8 @@
-#include "Menu.h"
+#include "Menu.h" // Menu.h has included AdminManager.h
 #include <iostream>
 #include <limits>
 
-Menu::Menu() : adminLoggedIn(false)
+Menu::Menu() : isLoggedIn(false), isAdmin(false)
 {
 }
 
@@ -12,45 +12,171 @@ Menu::~Menu()
 
 void Menu::displayMainMenu()
 {
-    std::cout << "\n---------- Main Menu ----------" << std::endl;
-    std::cout << "1. Login (管理员登录)" << std::endl;
-    std::cout << "2. Logout (退出登录)" << std::endl;
-    std::cout << "3. Add Book (添加图书)" << std::endl;
-    std::cout << "4. Delete Book (删除图书)" << std::endl;
-    std::cout << "5. Search Books (搜索图书)" << std::endl;
-    std::cout << "6. Print Books (打印所有图书信息)" << std::endl;
-    std::cout << "7. Add Reader (添加读者)" << std::endl;
-    std::cout << "8. Delete Reader (删除读者)" << std::endl;
-    std::cout << "9. Search Readers (搜索读者)" << std::endl;
-    std::cout << "10. Print Readers (打印所有读者信息)" << std::endl;
-    std::cout << "11. View Lend Logs (查看借还日志)" << std::endl;
-    std::cout << "0. Exit (退出)" << std::endl;
-    std::cout << "-------------------------------" << std::endl;
+    if (!isLoggedIn)
+    {
+        std::cout << "\n---------- Main Menu ----------" << std::endl;
+        std::cout << "1. Login" << std::endl;
+        std::cout << "0. Exit (退出)" << std::endl;
+    }
+    else
+    {
+        if (isAdmin)
+        {
+            std::cout << "\n---------- Main Menu ----------" << std::endl;
+            std::cout << "1. Logout (退出登录)" << std::endl;
+            std::cout << "2. Add Book (添加图书)" << std::endl;
+            std::cout << "3. Delete Book (删除图书)" << std::endl;
+            std::cout << "4. Search Books (搜索图书)" << std::endl;
+            std::cout << "5. Print Books (打印所有图书信息)" << std::endl;
+            std::cout << "6. Add Reader (添加读者)" << std::endl;
+            std::cout << "7. Delete Reader (删除读者)" << std::endl;
+            std::cout << "8. Search Readers (搜索读者)" << std::endl;
+            std::cout << "9. Print Readers (打印所有读者信息)" << std::endl;
+            std::cout << "10. View Lend Logs (查看借还日志)" << std::endl;
+            std::cout << "0. Exit (退出)" << std::endl;
+        }
+        else
+        {
+            std::cout << "\n---------- Main Menu ----------" << std::endl;
+            std::cout << "1. Logout (退出登录)" << std::endl;
+            std::cout << "2. Search Books (搜索图书)" << std::endl;
+            std::cout << "3. Print Books (打印所有图书信息)" << std::endl;
+            std::cout << "4. Search Readers (搜索读者)" << std::endl;
+            std::cout << "5. Print Readers (打印所有读者信息)" << std::endl;
+            std::cout << "6. Lend Book (借书)" << std::endl;
+            std::cout << "7. Return Book (还书)" << std::endl;
+            std::cout << "8. View Lend Logs (查看借还日志)" << std::endl;
+            std::cout << "0. Exit (退出)" << std::endl;
+        }
+    }
 }
 
 void Menu::login()
 {
     // In a real system, you would check username/password
-    // Here we just set adminLoggedIn to true
-    adminLoggedIn = true;
-    std::cout << "Admin logged in successfully." << std::endl;
+    // Here we just set adminisLoggedIn to true
+    isLoggedIn = true;
+    isAdmin = true;
+    std::cout << "Logged in successfully." << std::endl;
+    adminManager.loadBookData();
 }
 
 void Menu::logout()
 {
-    adminLoggedIn = false;
-    std::cout << "Admin logged out." << std::endl;
+    isLoggedIn = false;
+    isAdmin = false;
+    std::cout << "Logged out." << std::endl;
 }
-
+void Menu::switch_based_on_role(int &choice)
+{
+    if (!isLoggedIn)
+    {
+        switch (choice)
+        {
+        case 1:
+            login();
+            break;
+        case 0:
+            std::cout << "Exiting..." << std::endl;
+            break;
+        default:
+            std::cout << "Invalid choice." << std::endl;
+            break;
+        }
+    }
+    else
+    {
+        if (isAdmin)
+        {
+            switch (choice)
+            {
+            case 1:
+                logout();
+                break;
+            case 2:
+                adminManager.addBook();
+                break;
+            case 3:
+                adminManager.deleteBook();
+                break;
+            case 4:
+                adminManager.searchBooks();
+                break;
+            case 5:
+                adminManager.printBooks();
+                break;
+            case 6:
+                adminManager.addReader();
+                break;
+            case 7:
+                adminManager.deleteReader();
+                break;
+            case 8:
+                adminManager.searchReaders();
+                break;
+            case 9:
+                adminManager.printReaders();
+                break;
+            case 10:
+                adminManager.viewLogs();
+                break;
+            case 0:
+                std::cout << "Exiting..." << std::endl;
+                break;
+            default:
+                std::cout << "Invalid choice." << std::endl;
+                break;
+            }
+        }
+        else
+        {
+            switch (choice)
+            {
+            case 1:
+                logout();
+                break;
+            case 2:
+                adminManager.searchBooks();
+                break;
+            case 3:
+                adminManager.printBooks();
+                break;
+            case 4:
+                adminManager.searchReaders();
+                break;
+            case 5:
+                adminManager.printReaders();
+                break;
+            case 6:
+                adminManager.lendBook();
+                break;
+            case 7:
+                adminManager.returnBook();
+                break;
+            case 8:
+                adminManager.viewLogs();
+                break;
+            case 0:
+                std::cout << "Exiting..." << std::endl;
+                break;
+            default:
+                std::cout << "Invalid choice." << std::endl;
+                break;
+            }
+        }
+    }
+}
 void Menu::run()
 {
+
+    isAdmin = false;
+    isLoggedIn = false;
     int choice = -1;
     while (choice != 0)
     {
         displayMainMenu();
         std::cout << "Please choose an option: ";
         std::cin >> choice;
-
         if (std::cin.fail())
         {
             // Clear error flags
@@ -59,111 +185,6 @@ void Menu::run()
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             continue;
         }
-
-        switch (choice)
-        {
-        case 1:
-            login();
-            break;
-        case 2:
-            logout();
-            break;
-        case 3:
-            if (adminLoggedIn)
-            {
-                adminManager.addBook();
-            }
-            else
-            {
-                std::cout << "Please login first." << std::endl;
-            }
-            break;
-        case 4:
-            if (adminLoggedIn)
-            {
-                adminManager.deleteBook();
-            }
-            else
-            {
-                std::cout << "Please login first." << std::endl;
-            }
-            break;
-        case 5:
-            if (adminLoggedIn)
-            {
-                adminManager.searchBooks();
-            }
-            else
-            {
-                std::cout << "Please login first." << std::endl;
-            }
-            break;
-        case 6:
-            if (adminLoggedIn)
-            {
-                adminManager.printBooks();
-            }
-            else
-            {
-                std::cout << "Please login first." << std::endl;
-            }
-            break;
-        case 7:
-            if (adminLoggedIn)
-            {
-                adminManager.addReader();
-            }
-            else
-            {
-                std::cout << "Please login first." << std::endl;
-            }
-            break;
-        case 8:
-            if (adminLoggedIn)
-            {
-                adminManager.deleteReader();
-            }
-            else
-            {
-                std::cout << "Please login first." << std::endl;
-            }
-            break;
-        case 9:
-            if (adminLoggedIn)
-            {
-                adminManager.searchReaders();
-            }
-            else
-            {
-                std::cout << "Please login first." << std::endl;
-            }
-            break;
-        case 10:
-            if (adminLoggedIn)
-            {
-                adminManager.printReaders();
-            }
-            else
-            {
-                std::cout << "Please login first." << std::endl;
-            }
-            break;
-        case 11:
-            if (adminLoggedIn)
-            {
-                adminManager.viewLogs();
-            }
-            else
-            {
-                std::cout << "Please login first." << std::endl;
-            }
-            break;
-        case 0:
-            std::cout << "Exiting the system..." << std::endl;
-            break;
-        default:
-            std::cout << "Invalid choice, please try again." << std::endl;
-            break;
-        }
+        switch_based_on_role(choice);
     }
 }

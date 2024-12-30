@@ -14,16 +14,20 @@ public:
     ~BookManager();
 
     // Adds a new book
-    void addBook(const Book &book);
+    void addBook();
 
     // Deletes a book by bookId
     void deleteBook(long long bookId);
 
+    void printBookHeader();
     // Searches books by keyword (for demonstration, only matches bookId as string)
     void searchBooks(const std::string &keyword);
 
     // Prints all book info
     void printBooks();
+
+    // Loads data from file
+    void loadData();
 };
 
 #endif
