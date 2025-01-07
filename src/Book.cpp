@@ -1,9 +1,38 @@
 #include "Book.h"
 #include <iostream>
 #include <iomanip>
+#include <limits>
 // book_id,name,author,publish,ISBN,language,price,pub_date,class_id,quantity
 
+// prototype for input validation functions
+using namespace std;
 
+template <typename T>
+bool validatePositiveInput(T &input);
+bool validatePositiveDoubleInput(double &input);
+bool validateNonEmptyString(std::string &input);
+void printLine()
+{
+    for (int i = 0; i < 165; i++)
+        cout << "-";
+    cout << endl;
+}
+void printBookHeader()
+{
+    printLine();
+    cout << setw(5) << "Book ID"
+         << setw(28) << "Name"
+         << setw(20) << "Author"
+         << setw(20) << "Publish"
+         << setw(20) << "ISBN"
+         << setw(15) << "Language"
+         << setw(15) << "Price"
+         << setw(15) << "Pub Date"
+         << setw(12) << "Class ID"
+         << setw(12) << "Quantity"
+         << endl;
+    printLine();
+}
 Book::Book()
     : book_id(0), name(""), author(""), publish(""), ISBN(""),
       language(""), price(0.0), pub_date(""), class_id(0), quantity(0)
@@ -25,8 +54,8 @@ Book::~Book()
 
 void Book::displayBookData()
 {
-    // in table format 
-    // book_id,name,author,publish,ISBN,language,price,pub_date,class_id,quantity 
+    // in table format
+    // book_id,name,author,publish,ISBN,language,price,pub_date,class_id,quantity
     // Printing the data
     std::cout << std::setw(5) << book_id
               << std::setw(30) << name
@@ -90,77 +119,214 @@ int Book::getQuantity() const
 {
     return quantity;
 }
-
-void Book::setName(const std::string &n)
+void Book::modifyBook(Book &book)
 {
-    name = n;
+    std::cout << "Type the number to select the field you want to change: \n";
+    std::cout << "1. Book ID\t"
+              << "2. Name\t"
+              << "3. Author\t"
+              << "4. Publisher\t"
+              << "5. ISBN\t"
+              << "6. Language\t"
+              << "7. Price\t"
+              << "8. Publication Date\t"
+              << "9. Class ID\t"
+              << "a. Quantity\t"
+              << "q. Quit\n";
+    char choice;
+    std::cin >> choice;
+    switch (choice)
+    {
+    case '1':
+        setBookIdFromInput();
+        break;
+    case '2':
+        setNameFromInput();
+        break;
+    case '3':
+        setAuthorFromInput();
+        break;
+
+    case '4':
+        setPublishFromInput();
+        break;
+    case '5':
+        setISBNFromInput();
+        break;
+    case '6':
+        setLanguageFromInput();
+        break;
+    case '7':
+        setPriceFromInput();
+        break;
+    case '8':
+        setPubDateFromInput();
+        break;
+    case '9':
+        setClassIdFromInput();
+        break;
+    case 'a':
+        setQuantityFromInput();
+        break;
+    case 'q':
+        break;
+    }
 }
-
-void Book::setAuthor(const std::string &a)
-{
-    author = a;
-}
-
-void Book::setPublish(const std::string &p)
-{
-    publish = p;
-}
-
-void Book::setISBN(const std::string &isbn)
-{
-    ISBN = isbn;
-}
-
-void Book::setLanguage(const std::string &lang)
-{
-    language = lang;
-}
-
-void Book::setPrice(double pr)
-{
-    price = pr;
-}
-
-void Book::setPubDate(const std::string &date)
-{
-    pub_date = date;
-}
-
-void Book::setClassId(int c_id)
-{
-    class_id = c_id;
-}
-
-void Book::setQuantity(int qty)
-{
-    quantity = qty;
-}
-
-
-
 void Book::inputInfo()
 {
     // book_id,name,author,publish,ISBN,language,price,pub_date,class_id,quantity
+    setBookIdFromInput();
+    setNameFromInput();
+    setAuthorFromInput();
+    setPublishFromInput();
+    setISBNFromInput();
+    setLanguageFromInput();
+    setPriceFromInput();
+    setPubDateFromInput();
+    setClassIdFromInput();
+    setQuantityFromInput();
+    char choice;
+    do
+    {
+        // display the book data
+        std::cout << "The book data you entered is: " << std::endl;
+        
+        printBookHeader();
+        displayBookData();
+        std::cout << "Do you want to change the data? (y/n): ";
+        std::cin >> choice;
+        if (choice == 'y')
+        {
+            modifyBook(*this);
+        }
+    } while (choice == 'y');
+}
+// Function to validate integer input (positive numbers)
+template <typename T>
+bool validatePositiveInput(T &input)
+{
+    std::cin >> input;
+    if (std::cin.fail() || input <= 0)
+    {
+        std::cin.clear();                                                   // Clear error flag
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Ignore invalid input
+        std::cout << "\nInvalid input. Please enter a positive number: ";
+        return false;
+    }
+    return true;
+}
+
+// Function to validate double input (positive numbers)
+bool validatePositiveDoubleInput(double &input)
+{
+    std::cin >> input;
+    if (std::cin.fail() || input <= 0.0)
+    {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Ignore invalid input in the buffer
+        std::cout << "\nInvalid input. Please enter a positive number: ";
+        return false;
+    }
+    return true;
+}
+
+// Function to validate non-empty string input
+bool validateNonEmptyString(std::string &input)
+{
+    std::cin >> input;
+    if (input.empty())
+    {
+        std::cout << "\nInput cannot be empty. Please try again: ";
+        return false;
+    }
+    return true;
+}
+void Book::setBookIdFromInput()
+{
     std::cout << "Enter book ID: ";
-    std::cin >> book_id;
+    while (!validatePositiveInput(book_id))
+    {
+        std::cout << "Enter book ID: ";
+    }
+}
+
+void Book::setNameFromInput()
+{
     std::cout << "Enter book name: ";
-    std::cin.ignore();
-    std::getline(std::cin, name);
+    while (!validateNonEmptyString(name))
+    {
+        std::cout << "Enter book name: ";
+    }
+}
+
+void Book::setAuthorFromInput()
+{
     std::cout << "Enter author: ";
-    std::getline(std::cin, author);
+    while (!validateNonEmptyString(author))
+    {
+        std::cout << "Enter author: ";
+    }
+}
+
+void Book::setPublishFromInput()
+{
     std::cout << "Enter publisher: ";
-    std::getline(std::cin, publish);
+    while (!validateNonEmptyString(publish))
+    {
+        std::cout << "Enter publisher: ";
+    }
+}
+
+void Book::setISBNFromInput()
+{
     std::cout << "Enter ISBN: ";
-    std::getline(std::cin, ISBN);
-    std::cout << "Enter langeuage: ";
-    std::getline(std::cin, language);
+    while (!validateNonEmptyString(ISBN))
+    {
+        std::cout << "Enter ISBN: ";
+    }
+}
+
+void Book::setLanguageFromInput()
+{
+    std::cout << "Enter language: ";
+    while (!validateNonEmptyString(language))
+    {
+        std::cout << "Enter language: ";
+    }
+}
+
+void Book::setPriceFromInput()
+{
     std::cout << "Enter price: ";
-    std::cin >> price;
+    while (!validatePositiveDoubleInput(price))
+    {
+        std::cout << "Enter price: ";
+    }
+}
+
+void Book::setPubDateFromInput()
+{
     std::cout << "Enter publication date: ";
-    std::cin.ignore();
-    std::getline(std::cin, pub_date);
+    while (!validateNonEmptyString(pub_date))
+    {
+        std::cout << "Enter publication date: ";
+    }
+}
+
+void Book::setClassIdFromInput()
+{
     std::cout << "Enter class ID: ";
-    std::cin >> class_id;
+    while (!validatePositiveInput(class_id))
+    {
+        std::cout << "Enter class ID: ";
+    }
+}
+
+void Book::setQuantityFromInput()
+{
     std::cout << "Enter quantity: ";
-    std::cin >> quantity;
+    while (!validatePositiveInput(quantity))
+    {
+        std::cout << "Enter quantity: ";
+    }
 }

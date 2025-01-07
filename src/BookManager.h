@@ -8,7 +8,6 @@
 class BookManager {
 private:
     std::vector<Book> books;
-
 public:
     BookManager();
     ~BookManager();
@@ -19,9 +18,8 @@ public:
     // Deletes a book by bookId
     void deleteBook(long long bookId);
 
-    void printBookHeader();
     // Searches books by keyword (for demonstration, only matches bookId as string)
-    void searchBooks(const std::string &keyword);
+    bool searchBooks(int searchType, const std::string &keyword);
 
     // Prints all book info
     void printBooks();

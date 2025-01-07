@@ -57,7 +57,7 @@ void Menu::login()
     // Here we just set adminisLoggedIn to true
     isLoggedIn = true;
     isAdmin = true;
-    std::cout << "Logged in successfully." << std::endl;
+    std::cout << "[info]Logged in successfully." << std::endl;
     adminManager.loadBookData();
 }
 
@@ -65,8 +65,8 @@ void Menu::logout()
 {
     isLoggedIn = false;
     isAdmin = false;
-    std::cout << "Logged out." << std::endl;
-
+    std::cout << "[info]Logged out." << std::endl;
+    adminManager.saveBookData();
 }
 void Menu::switch_based_on_role(int &choice)
 {
@@ -78,10 +78,10 @@ void Menu::switch_based_on_role(int &choice)
             login();
             break;
         case 0:
-            std::cout << "Exiting..." << std::endl;
+            std::cout << "[info]Exiting..." << std::endl;
             break;
         default:
-            std::cout << "Invalid choice." << std::endl;
+            std::cout << "[info]Invalid choice." << std::endl;
             break;
         }
     }
@@ -122,10 +122,10 @@ void Menu::switch_based_on_role(int &choice)
                 adminManager.viewLogs();
                 break;
             case 0:
-                std::cout << "Exiting..." << std::endl;
+                std::cout << "[info]Exiting..." << std::endl;
                 break;
             default:
-                std::cout << "Invalid choice." << std::endl;
+                std::cout << "[info]Invalid choice." << std::endl;
                 break;
             }
         }
@@ -158,10 +158,10 @@ void Menu::switch_based_on_role(int &choice)
                 adminManager.viewLogs();
                 break;
             case 0:
-                std::cout << "Exiting..." << std::endl;
+                std::cout << "[info]Exiting..." << std::endl;
                 break;
             default:
-                std::cout << "Invalid choice." << std::endl;
+                std::cout << "[info]Invalid choice." << std::endl;
                 break;
             }
         }
@@ -176,7 +176,7 @@ void Menu::run()
     while (choice != 0)
     {
         displayMainMenu();
-        std::cout << "Please choose an option: ";
+        std::cout << "[info]Please choose an option: ";
         std::cin >> choice;
         if (std::cin.fail())
         {
@@ -187,5 +187,9 @@ void Menu::run()
             continue;
         }
         switch_based_on_role(choice);
+        printLine();
+        std::cout << "[info]Hit <enter> to continue...";
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cin.get();
     }
 }

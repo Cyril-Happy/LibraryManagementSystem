@@ -3,15 +3,11 @@
 #include <iomanip>
 #include <fstream>
 #include <sstream>
-#include<algorithm>
+#include "Book.h" // Book.h include printBookHeader() and printLine()
+#include <algorithm>
 using namespace std;
 // Print a line , its length is equal to the width of the table
-void printLine()
-{
-    for (int i = 0; i < 165; i++)
-        cout << "-";
-    cout << endl;
-}
+
 BookManager::BookManager()
 {
 }
@@ -19,28 +15,62 @@ BookManager::BookManager()
 BookManager::~BookManager()
 {
 }
+// Function to calculate the Longest Common Subsequence (LCS) length
+int longestCommonSubsequence(const std::string &s1, const std::string &s2)
+{
+    int len1 = s1.size();
+    int len2 = s2.size();
 
-// // Function to calculate Levenshtein distance (edit distance)
-// int levenshteinDistance(const string &s1, const string &s2) {
-//     int len1 = s1.size();
-//     int len2 = s2.size();
-    
-//     // Create a matrix to store the distance between substrings
-//     vector<vector<int>> dp(len1 + 1, vector<int>(len2 + 1));
+    // Create a 2D array to store lengths of longest common subsequence
+    std::vector<std::vector<int>> dp(len1 + 1, std::vector<int>(len2 + 1));
 
-//     for (int i = 0; i <= len1; ++i) {
-//         for (int j = 0; j <= len2; ++j) {
-//             if (i == 0) dp[i][j] = j;  // If s1 is empty, all characters of s2 have to be inserted
-//             else if (j == 0) dp[i][j] = i;  // If s2 is empty, all characters of s1 have to be deleted
-//             else {
-//                 int cost = (s1[i - 1] == s2[j - 1]) ? 0 : 1;
-//                 dp[i][j] = min({dp[i - 1][j] + 1, dp[i][j - 1] + 1, dp[i - 1][j - 1] + cost});
-//             }
-//         }
-//     }
+    // Build the dp table
+    for (int i = 1; i <= len1; ++i)
+    {
+        for (int j = 1; j <= len2; ++j)
+        {
+            if (s1[i - 1] == s2[j - 1])
+            {
+                dp[i][j] = dp[i - 1][j - 1] + 1; // Characters match, increase length
+            }
+            else
+            {
+                dp[i][j] = std::max(dp[i - 1][j], dp[i][j - 1]); // No match, take max of removing one character from either string
+            }
+        }
+    }
 
-//     return dp[len1][len2];
-// }
+    // The length of the longest common subsequence is stored in dp[len1][len2]
+    return dp[len1][len2];
+}
+
+// Function to calculate Levenshtein distance (edit distance)
+int levenshteinDistance(const string &s1, const string &s2)
+{
+    int len1 = s1.size();
+    int len2 = s2.size();
+
+    // Create a matrix to store the distance between substrings
+    vector<vector<int>> dp(len1 + 1, vector<int>(len2 + 1));
+
+    for (int i = 0; i <= len1; ++i)
+    {
+        for (int j = 0; j <= len2; ++j)
+        {
+            if (i == 0)
+                dp[i][j] = j; // If s1 is empty, all characters of s2 have to be inserted
+            else if (j == 0)
+                dp[i][j] = i; // If s2 is empty, all characters of s1 have to be deleted
+            else
+            {
+                int cost = (s1[i - 1] == s2[j - 1]) ? 0 : 1;
+                dp[i][j] = min({dp[i - 1][j] + 1, dp[i][j - 1] + 1, dp[i - 1][j - 1] + cost});
+            }
+        }
+    }
+
+    return dp[len1][len2];
+}
 // Load book data from ../data/books.csv
 void BookManager::loadData()
 {
@@ -103,9 +133,9 @@ void BookManager::loadData()
 
     file.close();
     if (recordCount)
-        cout << "Successfully loaded " << recordCount << " book records." << endl;
+        cout << "[info]Successfully loaded " << recordCount << " book records." << endl;
     else
-        cout << "No book records loaded." << endl;
+        cout << "[info]No book records loaded." << endl;
 }
 
 void BookManager::saveData()
@@ -131,36 +161,46 @@ void BookManager::saveData()
              << book.getClassId() << ","
              << book.getQuantity() << endl;
     }
+    cout << "[info]Successfully saved " << books.size() << " book records." << endl;
 }
 void BookManager::addBook()
 {
     Book book;
     book.inputInfo();
-    books.push_back(book);
+    cout << "[info]Do you want to save the book? (y/n): ";
+    char choice;
+    cin >> choice;
+    if (choice == 'y')
+    {
+        books.push_back(book);
+        cout << "[info]Book added successfully!" << endl;
+    }
+    else
+        cout << "[info]Book not saved." << endl;
 }
-void BookManager::printBookHeader()
-{
-    printLine();
-    cout << setw(5) << "Book ID"
-              << setw(28) << "Name"
-              << setw(20) << "Author"
-              << setw(20) << "Publish"
-              << setw(20) << "ISBN"
-              << setw(15) << "Language"
-              << setw(15) << "Price"
-              << setw(15) << "Pub Date"
-              << setw(12) << "Class ID"
-              << setw(12) << "Quantity"
-              << endl;
-    printLine();
-}
+
 void BookManager::deleteBook(long long bookId)
 {
     for (auto it = books.begin(); it != books.end();)
     {
         if (it->getBookId() == bookId)
         {
-            it = books.erase(it);
+            cout << "[info]Do you want to delete the book? (y/n): \n";
+            printBookHeader();
+            (*it).displayBookData();
+            printLine();
+            char choice;
+            cin >> choice;
+            if (choice == 'y')
+            {
+                it = books.erase(it);
+                cout << "[info]Book deleted successfully!" << endl;
+            }
+            else
+            {
+                cout << "[info]Book not deleted." << endl;
+                return;
+            }
         }
         else
         {
@@ -169,21 +209,43 @@ void BookManager::deleteBook(long long bookId)
     }
 }
 
-void BookManager::searchBooks(const string &keyword)
+bool BookManager::searchBooks(int searchType, const string &keyword)
 {
-    printBookHeader();
-    for (auto &book : books)
+    vector<pair<Book, int>> bookDistances;
+    for (const auto &book : books)
     {
-        // Example: Check if book ID in string form matches keyword
-        
-        string bookIdStr = to_string(book.getBookId());
-        if (bookIdStr.find(keyword) != string::npos)// npos indicates no match
+        if (searchType == 1) // search by name
         {
-            book.displayBookData();
-            printLine();
+            int distance = longestCommonSubsequence(keyword, book.getName());
+            if (distance >= 2)
+                bookDistances.push_back({book, distance});
         }
-        // You could also compare other fields (name, author, etc.) if needed
+        else if (searchType == 2) // search by author
+        {
+            int distance = longestCommonSubsequence(keyword, book.getAuthor());
+            bookDistances.push_back({book, distance});
+        }
+        else if (searchType == 3) // search by bookId
+        {
+            if (book.getBookId() == stoll(keyword))
+                bookDistances.push_back({book, 0});
+        }
     }
+    if (bookDistances.size() == 0)
+    {
+        cout << "[info]No books found with the given keyword: " << keyword << endl;
+        return false;
+    }
+    sort(bookDistances.begin(), bookDistances.end(), [](const pair<Book, int> &a, const pair<Book, int> &b)
+         { return a.second < b.second; });
+    // print the top 10 books
+    printBookHeader();
+    for (int i = 0; i <min((int)bookDistances.size(),10); i++)
+    {
+        bookDistances[i].first.displayBookData();
+        printLine();
+    }
+    return true;
 }
 
 void BookManager::printBooks()

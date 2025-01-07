@@ -3,6 +3,8 @@
 
 #include <string>
 
+void printBookHeader();
+void printLine();
 class Book
 {
 private:
@@ -42,16 +44,20 @@ public:
     std::string getPubDate() const;
     int getClassId() const;
     int getQuantity() const;
-    void setName(const std::string &name);
-    void setAuthor(const std::string &author);
-    void setPublish(const std::string &publish);
-    void setISBN(const std::string &ISBN);
-    void setLanguage(const std::string &language);
-    void setPrice(double price);
-    void setPubDate(const std::string &pubDate);
-    void setClassId(int classId);
-    void setQuantity(int quantity);
     
+    // modify book info
+    void modifyBook(Book &book);
+    void setBookIdFromInput();
+    void setNameFromInput();
+    void setAuthorFromInput();
+    void setPublishFromInput();
+    void setISBNFromInput();
+    void setLanguageFromInput();
+    void setPriceFromInput();
+    void setPubDateFromInput();
+    void setClassIdFromInput();
+    void setQuantityFromInput();
+
 
 };
 
