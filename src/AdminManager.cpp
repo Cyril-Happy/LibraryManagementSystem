@@ -1,4 +1,6 @@
 #include "AdminManager.h"
+#include <algorithm>
+
 #include <iostream>
 #include <vector>
 #include "Book.h"
@@ -103,7 +105,7 @@ void AdminManager::searchBooks()
 }
 void AdminManager::printBooks()
 {
-    bookManager.printBooks();
+    bookManager.printAllBooks();
 }
 
 void AdminManager::loadUserData()
@@ -143,20 +145,22 @@ void AdminManager::classifyByClassId()
 
 void AdminManager::organizeBooks()
 {
-    char choice;
+    string choice;
     do
     {
-        std::cout << "[info]Organize books by: (1: language, 2: classId, q: quit): \n";
+        std::cout << "[info]You can enter the [number] or [the name of the option]\n";
+        std::cout << "[info]Classify books by: (1: language, 2: classId, q: quit): \n";
         std::cin >> choice;
-        if (choice == '1')
+        if(choice.size()!=1)choice = correctInput(choice, {"language", "classId", "quit"});
+        if (choice == "1" || choice == "language")
         {
             classifyByLanguage();
         }
-        else if (choice == '2')
+        else if (choice == "2" || choice == "classId")
         {
             classifyByClassId();
         }
-        else if (choice == 'q')
+        else if (choice == "q" || choice == "quit")
         {
             std::cout << "[info]Quitting organize books." << std::endl;
             break;
@@ -165,6 +169,41 @@ void AdminManager::organizeBooks()
         {
             std::cout << "[info]Invalid choice." << std::endl;
         }
-    }
-    while(choice != 'q');
+    } while (choice != "q");
+}
+void AdminManager::viewBooks()
+{
+    string choice;
+    do
+    {
+        std::cout << "[info]Enter the option to view books by: \n";
+        std::cout << "[info]You can enter the [number] or [the name of the option]\n";
+        std::cout << "1. Language\n";
+        std::cout << "2. ClassId\n";
+        std::cout << "3. All Books\n";
+        std::cout << "Enter <q> to quit\n";
+        std::cin >> choice;
+        if(choice.size()!=1)choice = correctInput(choice, {"Language", "ClassId", "All Books", "Quit"});
+        if (choice == "1" || choice == "Language")
+        {
+            bookManager.viewBooksClassifiedByLanguage();
+        }
+        else if (choice == "2" || choice == "ClassId")
+        {
+            bookManager.viewBooksClassifiedByClassId();
+        }
+        else if (choice == "3" || choice == "All Books")
+        {
+            bookManager.printAllBooks();
+        }
+        else if (choice == "q" || choice == "Quit")
+        {
+            std::cout << "Quitting view books\n";
+            return;
+        }
+        else
+        {
+            std::cout << "Invalid choice\n";
+        }
+    } while (choice != "q");
 }

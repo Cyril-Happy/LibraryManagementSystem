@@ -27,7 +27,7 @@ void Menu::displayMainMenu()
             std::cout << "2. Add Book (添加图书)" << std::endl;
             std::cout << "3. Delete Book (删除图书)" << std::endl;
             std::cout << "4. Search Books (搜索图书)" << std::endl;
-            std::cout << "5. Find Books (查看所有图书信息)" << std::endl;
+            std::cout << "5. View Books (查看图书信息)" << std::endl;
             std::cout << "6. Organize Books (整理图书)" << std::endl;
             std::cout << "7. View Lend Logs (查看借还日志)" << std::endl;
             std::cout << "0. Exit (退出)" << std::endl;
@@ -37,7 +37,7 @@ void Menu::displayMainMenu()
             std::cout << "\n---------- Main Menu ----------" << std::endl;
             std::cout << "1. Logout (退出登录)" << std::endl;
             std::cout << "2. Search Books (搜索图书)" << std::endl;
-            std::cout << "3. Find Books (查看所有图书信息)" << std::endl;
+            std::cout << "3. View Books (查看所有图书信息)" << std::endl;
             std::cout << "4. Lend Book (借书)" << std::endl;
             std::cout << "5. Return Book (还书)" << std::endl;
             std::cout << "0. Exit (退出)" << std::endl;
@@ -118,8 +118,8 @@ void Menu::switch_based_on_role(int &choice)
             case 4://search book
                 adminManager.searchBooks();
                 break;
-            case 5://print book
-                adminManager.printBooks();
+            case 5://View books
+                adminManager.viewBooks();
                 break;
             case 6:
                 adminManager.organizeBooks();
@@ -146,7 +146,7 @@ void Menu::switch_based_on_role(int &choice)
                 adminManager.searchBooks();
                 break;
             case 3:
-                adminManager.printBooks();
+                adminManager.viewBooks();
                 break;
             case 4:
                 adminManager.lendBook();

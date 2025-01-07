@@ -5,6 +5,11 @@
 #include <string>
 #include "Book.h"
 using namespace std;
+vector<string>extract_strings_from_file(string filename); // The returned vector may be empty
+int longestCommonSubsequence(const std::string &s1, const std::string &s2);
+vector<Book> extract_books_from_file(string filename);
+string correctInput(string input, vector<string> options);
+void displayBooks(vector<Book> books);
 class BookManager
 {
 private:
@@ -24,10 +29,10 @@ public:
     std::vector<Book> searchBooks(int searchType, const string &keyword);
 
     // Prints all book info
-    void printBooks();
+    void printAllBooks();
 
     // Loads data from file
-    void loadDatad();
+    void loadData();
 
     vector<Book> getBooks() const;
     // Saves data to file
@@ -35,6 +40,8 @@ public:
     // 
     void classifyByLanguage();
     void classifyByClassId();
+    void viewBooksClassifiedByLanguage();
+    void viewBooksClassifiedByClassId();
 };
 
 #endif

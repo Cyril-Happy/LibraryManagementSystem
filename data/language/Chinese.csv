@@ -1,37 +1,27 @@
 Book ID,Name,Author,Publish,ISBN,Language,Price,Pub Date,Class ID,Quantity
-6,Thorns Infinity Mirror,Grace Clark,CityLights,6289268499,Chinese,67.17,1992-08-28,8,7
-7,Secrets Whisper,Liam Edwards,Sourcebooks,3278466741,Chinese,173.42,1987-01-24,11,12
-10,Echoes Bound Lost,Hugo Green,Sourcebooks,3016052827,Chinese,144.07,1973-01-14,1,13
-12,Veil Ghosts,Quinn King,PenguinRandomHouse,6168467982,Chinese,69.25,1974-12-22,5,5
-14,Infinity Rain,Ava Taylor,Macmillan,5160296613,Chinese,75.89,1909-06-30,11,13
-21,Echo Edge,Eva White,TorBooks,8837319814,Chinese,17.35,1965-08-17,7,15
-22,Path Heart Edge,Zachary Van Dyke,Knopf,1728920891,Chinese,179.94,1948-04-12,11,4
-30,Tempest Rain,Liam Edwards,Penguin,6546063196,Chinese,21.53,2015-06-21,11,18
-31,Shadows Awakening Legacy,Ava Yates,HoughtonMifflin,5012073375,Chinese,40.08,2004-02-23,9,20
-33,Fire Memory Light,Wendy Parker,HoughtonMifflin,5575695592,Chinese,68.49,1925-07-23,7,17
-54,Rain Lost Bound,Brian Usher,RowmanLittlefield,1212911818,Chinese,84.28,1942-09-08,10,10
-57,Rift Horizon,Kylie Parker,HarperCollins,3884045125,Chinese,166.61,1967-12-23,3,11
-58,Ghosts Kingdom,Brian Brown,TorBooks,3234889034,Chinese,58.53,1900-05-18,8,6
-69,Dawn Truth,Quinn Newton,PlumeBooks,3904360365,Chinese,76.6,1952-10-03,9,6
-71,Storm Journey,Frederick O'Connor,WorkmanPublishing,6844375305,Chinese,168.3,1924-04-04,9,2
-78,Betrayal Storm Path,Eva Fisher,WorkmanPublishing,3752634344,Chinese,88.81,2019-01-17,8,4
-92,Veil Lost,Alice Zimmerman,TyndaleHouse,4609205987,Chinese,85.53,1923-07-28,11,5
-100,Ghosts Sins Nightfall,Xavier Stevens,TyndaleHouse,5744790408,Chinese,165.91,1920-03-20,6,20
-6,Thorns Infinity Mirror,Grace Clark,CityLights,6289268499,Chinese,67.17,1992-08-28,8,7
-7,Secrets Whisper,Liam Edwards,Sourcebooks,3278466741,Chinese,173.42,1987-01-24,11,12
-10,Echoes Bound Lost,Hugo Green,Sourcebooks,3016052827,Chinese,144.07,1973-01-14,1,13
-12,Veil Ghosts,Quinn King,PenguinRandomHouse,6168467982,Chinese,69.25,1974-12-22,5,5
-14,Infinity Rain,Ava Taylor,Macmillan,5160296613,Chinese,75.89,1909-06-30,11,13
-21,Echo Edge,Eva White,TorBooks,8837319814,Chinese,17.35,1965-08-17,7,15
-22,Path Heart Edge,Zachary Van Dyke,Knopf,1728920891,Chinese,179.94,1948-04-12,11,4
-30,Tempest Rain,Liam Edwards,Penguin,6546063196,Chinese,21.53,2015-06-21,11,18
-31,Shadows Awakening Legacy,Ava Yates,HoughtonMifflin,5012073375,Chinese,40.08,2004-02-23,9,20
-33,Fire Memory Light,Wendy Parker,HoughtonMifflin,5575695592,Chinese,68.49,1925-07-23,7,17
-54,Rain Lost Bound,Brian Usher,RowmanLittlefield,1212911818,Chinese,84.28,1942-09-08,10,10
-57,Rift Horizon,Kylie Parker,HarperCollins,3884045125,Chinese,166.61,1967-12-23,3,11
-58,Ghosts Kingdom,Brian Brown,TorBooks,3234889034,Chinese,58.53,1900-05-18,8,6
-69,Dawn Truth,Quinn Newton,PlumeBooks,3904360365,Chinese,76.6,1952-10-03,9,6
-71,Storm Journey,Frederick O'Connor,WorkmanPublishing,6844375305,Chinese,168.3,1924-04-04,9,2
-78,Betrayal Storm Path,Eva Fisher,WorkmanPublishing,3752634344,Chinese,88.81,2019-01-17,8,4
-92,Veil Lost,Alice Zimmerman,TyndaleHouse,4609205987,Chinese,85.53,1923-07-28,11,5
-100,Ghosts Sins Nightfall,Xavier Stevens,TyndaleHouse,5744790408,Chinese,165.91,1920-03-20,6,20
+8,Fate Legacy Phoenix,Peter Hill,CityLights,7743868151,Chinese,24.27,1950-03-20,9,9
+9,Whisper Light Veil,Ryan Kelly,FarrarStraus,1395673396,Chinese,197.25,1996-06-05,2,18
+12,Lost Shadows Whisper,Phoebe Miller,Hachette,4893860437,Chinese,191.13,1908-02-26,6,12
+16,Mirror Whisper,Ivy Edwards,NewDirections,8931192723,Chinese,142.9,1982-07-12,10,15
+22,Veil Secrets,Yvonne Roberts,EccoPress,4155615532,Chinese,190.74,1954-08-14,10,20
+23,Truth Kingdom,Mia Yates,Knopf,6657120804,Chinese,79.23,1981-08-14,7,8
+36,Wings Truth Flame,Clara Anderson,Hachette,4570823090,Chinese,52.43,1920-12-25,9,17
+43,Whisper Rebirth Secrets,Lucas Roberts,Hachette,7655632522,Chinese,161.15,1916-03-21,4,14
+48,Fate Moon,Liam Usher,BeaconPress,4281604566,Chinese,124.82,1972-02-03,5,13
+50,Whisper Bound,Daniel Campbell,UniversityPress,8885146419,Chinese,141.25,1963-12-29,11,2
+58,Light Echoes Truth,Henry Richards,Doubleday,6670566652,Chinese,173.26,2006-03-11,10,12
+60,Awakening Truth Veil,Hugo Grant,Zondervan,7794351112,Chinese,34.73,1908-01-28,7,14
+61,Fire Tempest Echo,Rachel Newton,WorkmanPublishing,4495085566,Chinese,192.05,1970-08-28,7,7
+66,Silence Embrace,Jake Lee,Sourcebooks,4537793189,Chinese,10.27,1956-05-30,2,8
+68,Tempest Rain Journey,Zachary Richards,Doubleday,9435029188,Chinese,191.9,1920-03-20,4,19
+71,Heart Fire,Taylor Grant,BluebirdBooks,2739546180,Chinese,97.97,1964-05-08,4,14
+72,Storm Moon,Lucas Quinn,KnopfDoubleday,4166194902,Chinese,174.42,1942-06-18,9,14
+74,Path Infinity Nightfall,Victor White,TorBooks,7406162270,Chinese,117.98,2006-09-11,7,1
+76,Betrayal Storms,Violet Irving,PrincetonPress,2862346464,Chinese,194.4,2013-07-07,1,13
+78,Ashes Journey Tempest,Taylor Quinn,SkyhorsePublishing,5739531589,Chinese,194.71,1976-10-18,6,20
+79,Legacy Bound Rift,Ethan Lee,AcornPress,3022912040,Chinese,11.88,1909-03-20,5,13
+84,Dream Legacy,Charlotte Lewis,Scholastic,9538810485,Chinese,124.22,1911-01-10,10,17
+85,Memory Fire Lost,Zachary Harris,ArcadePublishing,7794154724,Chinese,21.9,2014-11-21,1,1
+93,Lost Dawn Memory,Frederick Harris,HaymarketBooks,7860952554,Chinese,52.08,1964-09-26,6,3
+98,Tempest Serpent Path,Ryan Kelly,FarrarStraus,2329475752,Chinese,175.48,1907-09-26,4,7
+100,Betrayal Embrace,Grace Usher,Hachette,8040981276,Chinese,73.93,1933-12-01,8,15

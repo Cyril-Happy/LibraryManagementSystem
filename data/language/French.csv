@@ -1,41 +1,19 @@
 Book ID,Name,Author,Publish,ISBN,Language,Price,Pub Date,Class ID,Quantity
-13,Lost Shadows Betrayal,Victor Thompson,StMartinsPress,9066223408,French,34.45,1900-05-21,11,20
-15,Secrets Embrace,Jack Stevens,PlumeBooks,2756471044,French,197.55,2003-01-10,9,19
-19,Storm Sins,Samuel Irving,FlatironBooks,6086616615,French,197.38,1915-11-30,7,3
-26,Heart Wings Echoes,Taylor Davis,BerkleyBooks,2545137058,French,199.13,1950-05-11,1,7
-38,Edge Lost,Thomas Lewis,TorBooks,6707701030,French,114.86,1962-12-05,1,13
-40,Embrace Storms Truth,Clara Quinn,Scribner,7611502832,French,62,1994-07-28,9,20
-42,Serpent Betrayal,Jake Daniels,Pearson,6798075720,French,176.56,1996-09-19,6,5
-44,Betrayal Sins,Victor Brooks,Wiley,6382221233,French,17.31,2016-06-13,11,11
-47,Flame Rain,Nathan Martin,Oxford,1168753618,French,88.7,1959-05-10,3,2
-48,Memory Rebirth,Quinn Oliver,StMartinsPress,5583049427,French,37.31,2024-10-12,9,2
-51,Legacy Storm Lost,Emma Adams,StMartinsPress,5084751180,French,57.09,2020-08-29,6,9
-53,Awakening Whisper,Liam O'Connor,HarperCollins,2806636100,French,129.39,1989-07-18,1,18
-63,Kingdom Silence,Yvonne Smith,SealPress,3645622695,French,21.96,1957-09-02,2,14
-65,Serpent Echoes Dream,David White,Cambridge,6778949647,French,155.2,1921-08-30,10,7
-72,Echoes Edge Infinity,Frederick Stevens,CityLights,7046419196,French,172.88,1907-07-04,6,7
-80,Rain Light,Benjamin Yates,TyndaleHouse,3691385065,French,163.36,1994-09-29,6,9
-81,Embrace Serpent Horizon,Taylor Foster,TyndaleHouse,1747110836,French,137.09,1912-06-04,1,16
-86,Whisper Phoenix,Kylie King,BluebirdBooks,2231654160,French,186.43,1914-03-05,11,16
-91,Truth Dream,Zoe Peterson,HaymarketBooks,4757742166,French,79.09,1973-08-14,2,20
-94,Path Embrace Awakening,Henry Nelson,Scribner,6728993598,French,178.61,2004-04-23,11,9
-13,Lost Shadows Betrayal,Victor Thompson,StMartinsPress,9066223408,French,34.45,1900-05-21,11,20
-15,Secrets Embrace,Jack Stevens,PlumeBooks,2756471044,French,197.55,2003-01-10,9,19
-19,Storm Sins,Samuel Irving,FlatironBooks,6086616615,French,197.38,1915-11-30,7,3
-26,Heart Wings Echoes,Taylor Davis,BerkleyBooks,2545137058,French,199.13,1950-05-11,1,7
-38,Edge Lost,Thomas Lewis,TorBooks,6707701030,French,114.86,1962-12-05,1,13
-40,Embrace Storms Truth,Clara Quinn,Scribner,7611502832,French,62,1994-07-28,9,20
-42,Serpent Betrayal,Jake Daniels,Pearson,6798075720,French,176.56,1996-09-19,6,5
-44,Betrayal Sins,Victor Brooks,Wiley,6382221233,French,17.31,2016-06-13,11,11
-47,Flame Rain,Nathan Martin,Oxford,1168753618,French,88.7,1959-05-10,3,2
-48,Memory Rebirth,Quinn Oliver,StMartinsPress,5583049427,French,37.31,2024-10-12,9,2
-51,Legacy Storm Lost,Emma Adams,StMartinsPress,5084751180,French,57.09,2020-08-29,6,9
-53,Awakening Whisper,Liam O'Connor,HarperCollins,2806636100,French,129.39,1989-07-18,1,18
-63,Kingdom Silence,Yvonne Smith,SealPress,3645622695,French,21.96,1957-09-02,2,14
-65,Serpent Echoes Dream,David White,Cambridge,6778949647,French,155.2,1921-08-30,10,7
-72,Echoes Edge Infinity,Frederick Stevens,CityLights,7046419196,French,172.88,1907-07-04,6,7
-80,Rain Light,Benjamin Yates,TyndaleHouse,3691385065,French,163.36,1994-09-29,6,9
-81,Embrace Serpent Horizon,Taylor Foster,TyndaleHouse,1747110836,French,137.09,1912-06-04,1,16
-86,Whisper Phoenix,Kylie King,BluebirdBooks,2231654160,French,186.43,1914-03-05,11,16
-91,Truth Dream,Zoe Peterson,HaymarketBooks,4757742166,French,79.09,1973-08-14,2,20
-94,Path Embrace Awakening,Henry Nelson,Scribner,6728993598,French,178.61,2004-04-23,11,9
+5,Shadows Heart Soul,Quinn Newton,NewDirections,8048585493,French,79.52,1940-05-22,4,11
+10,Secrets Fire Rebirth,Grace Daniels,BerkleyBooks,7075851577,French,49.77,1921-05-12,10,8
+11,Storm Ashes,Daniel Xander,RandomHouse,3005593546,French,106.28,2008-06-03,1,10
+15,Veins Infinity Edge,Phoebe White,EccoPress,4369454841,French,127.38,1969-08-17,10,6
+17,Edge Rising,Jack Taylor,WorkmanPublishing,2513860900,French,197.83,1929-04-29,10,18
+18,Memory Nightfall,Nathan Lewis,PenguinRandomHouse,6986592728,French,138.61,2003-07-09,4,2
+25,Rebirth Journey Heart,Ivy Newton,Liveright,4028919759,French,186.9,1989-07-06,7,10
+26,Echoes Storm,Kylie Xu,AlgonquinBooks,5524837511,French,192.1,1936-09-01,6,20
+27,Light Sins,Zoe King,AcornPress,3046023635,French,141.76,1930-07-25,5,19
+28,Fate Soul,Yvonne Zimmerman,Scribner,8196161095,French,137.23,1980-04-05,10,5
+29,Kingdom Ghosts Mirror,Olivia Harris,TarcherPerigee,3843073257,French,172.86,1943-12-11,4,12
+38,Light Lost Fate,Benjamin Peterson,SealPress,8997619230,French,129.32,1995-04-21,3,10
+75,Rift Bound,Sophia Jackson,KnopfDoubleday,3471815217,French,83.86,1958-10-20,10,3
+77,Blood Bound,Violet Miller,CityLights,6675811814,French,70.2,1970-11-17,7,20
+81,Storm Blood,Jack Richards,Doubleday,9216551586,French,110.29,2023-03-31,4,14
+83,Infinity Shadows,Grace Foster,NewDirections,3823691181,French,69.17,1977-10-26,10,8
+90,Fire Lost Serpent,Charlotte Ingram,GreenleafBookGroup,1239092607,French,83.86,1911-02-19,2,4
+97,Mirror Light Legacy,Ethan Smith,Pearson,6274625666,French,54.96,1922-12-01,8,10

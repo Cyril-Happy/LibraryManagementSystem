@@ -56,7 +56,7 @@ void Book::displayBookData()
 {
     // in table format
     // book_id,name,author,publish,ISBN,language,price,pub_date,class_id,quantity
-    // Printing the data
+    // Printing the datalk
     std::cout << std::setw(5) << book_id
               << std::setw(30) << name
               << std::setw(20) << author

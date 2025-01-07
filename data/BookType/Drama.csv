@@ -1,17 +1,6 @@
 Book ID,Name,Author,Publish,ISBN,Language,Price,Pub Date,Class ID,Quantity
-11,Tempest Path,Zoe Oliver,HaymarketBooks,2929252024,Spanish,142.73,1927-01-07,3,1
-32,Legacy Rift,Maria Grant,Sourcebooks,7015579335,English,130.18,2017-02-16,3,8
-34,Truth Awakening,Ryan Zimmerman,SimonAndSchuster,7848082019,Russian,174.6,1930-09-23,3,18
-46,Soul Rising Betrayal,Peter Harris,BluebirdBooks,7343785721,English,180.43,1987-07-03,3,10
-47,Flame Rain,Nathan Martin,Oxford,1168753618,French,88.7,1959-05-10,3,2
-50,Horizon Ashes Mirror,Ivy Yates,FlatironBooks,7581269162,Russian,25.58,2011-09-21,3,19
-57,Rift Horizon,Kylie Parker,HarperCollins,3884045125,Chinese,166.61,1967-12-23,3,11
-67,Sins Ghosts Fire,Ethan Green,Wiley,8095723697,Spanish,199.06,1978-10-31,3,7
-11,Tempest Path,Zoe Oliver,HaymarketBooks,2929252024,Spanish,142.73,1927-01-07,3,1
-32,Legacy Rift,Maria Grant,Sourcebooks,7015579335,English,130.18,2017-02-16,3,8
-34,Truth Awakening,Ryan Zimmerman,SimonAndSchuster,7848082019,Russian,174.6,1930-09-23,3,18
-46,Soul Rising Betrayal,Peter Harris,BluebirdBooks,7343785721,English,180.43,1987-07-03,3,10
-47,Flame Rain,Nathan Martin,Oxford,1168753618,French,88.7,1959-05-10,3,2
-50,Horizon Ashes Mirror,Ivy Yates,FlatironBooks,7581269162,Russian,25.58,2011-09-21,3,19
-57,Rift Horizon,Kylie Parker,HarperCollins,3884045125,Chinese,166.61,1967-12-23,3,11
-67,Sins Ghosts Fire,Ethan Green,Wiley,8095723697,Spanish,199.06,1978-10-31,3,7
+2,Dawn Ashes,Katie Adams,Abrams,1244136145,English,50.55,1996-07-21,3,3
+38,Light Lost Fate,Benjamin Peterson,SealPress,8997619230,French,129.32,1995-04-21,3,10
+46,Whisper Ashes Fate,Noah Oliver,Abrams,2260572221,English,28.09,1910-09-12,3,3
+59,Memory Lost Heart,Ethan Kelly,Sourcebooks,5944739461,Spanish,36.24,1916-07-11,3,11
+88,Journey Veil,Grace Brooks,GreenleafBookGroup,5047484204,English,56.12,1925-08-24,3,16

@@ -1,7 +1,10 @@
 Book ID,Name,Author,Publish,ISBN,Language,Price,Pub Date,Class ID,Quantity
-18,Memory Silence,Grace Green,TorBooks,5557975382,Russian,69.43,1957-04-10,2,10
-63,Kingdom Silence,Yvonne Smith,SealPress,3645622695,French,21.96,1957-09-02,2,14
-91,Truth Dream,Zoe Peterson,HaymarketBooks,4757742166,French,79.09,1973-08-14,2,20
-18,Memory Silence,Grace Green,TorBooks,5557975382,Russian,69.43,1957-04-10,2,10
-63,Kingdom Silence,Yvonne Smith,SealPress,3645622695,French,21.96,1957-09-02,2,14
-91,Truth Dream,Zoe Peterson,HaymarketBooks,4757742166,French,79.09,1973-08-14,2,20
+9,Whisper Light Veil,Ryan Kelly,FarrarStraus,1395673396,Chinese,197.25,1996-06-05,2,18
+21,Bound Rain,Eva King,SkyhorsePublishing,6170693148,English,43.23,1986-09-22,2,15
+30,Ashes Ghosts,Taylor Fisher,GreenleafBookGroup,7623587598,Spanish,31.11,1953-12-23,2,5
+34,Echoes Storm,Quinn Ingram,TarcherPerigee,7622093591,Spanish,28.31,1971-01-05,2,5
+41,Light Wings,Ivy White,PlumeBooks,4994502767,English,59.58,1952-12-01,2,3
+52,Storms Fate Legacy,Jake Hill,WorkmanPublishing,5582558933,Spanish,191.39,1957-08-26,2,4
+63,Serpent Storm Ghosts,Zachary Daniels,LittleBrown,5910427503,Russian,190.09,2006-01-29,2,14
+66,Silence Embrace,Jake Lee,Sourcebooks,4537793189,Chinese,10.27,1956-05-30,2,8
+90,Fire Lost Serpent,Charlotte Ingram,GreenleafBookGroup,1239092607,French,83.86,1911-02-19,2,4

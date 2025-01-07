@@ -1,37 +1,20 @@
 Book ID,Name,Author,Publish,ISBN,Language,Price,Pub Date,Class ID,Quantity
-2,Serpent Journey,Xavier Davis,RegneryPublishing,4167991954,Russian,25.15,1926-11-29,5,7
-8,Legacy Truth,Gemma Oliver,Routledge,5834882127,Russian,188.35,1972-03-03,9,6
-18,Memory Silence,Grace Green,TorBooks,5557975382,Russian,69.43,1957-04-10,2,10
-28,Memory Silence Whisper,Benjamin Underwood,TyndaleHouse,4157799704,Russian,95.81,1960-06-16,9,10
-34,Truth Awakening,Ryan Zimmerman,SimonAndSchuster,7848082019,Russian,174.6,1930-09-23,3,18
-37,Awakening Storm Echoes,Clara Miller,Oxford,7710471623,Russian,29.95,1987-05-22,11,11
-50,Horizon Ashes Mirror,Ivy Yates,FlatironBooks,7581269162,Russian,25.58,2011-09-21,3,19
-59,Embrace Sins,Samuel Harris,Penguin,4694184938,Russian,55.35,1998-04-05,4,13
-60,Flame Serpent,Yvonne Xander,Routledge,2407374228,Russian,109.93,1943-09-08,10,4
-61,Ashes Shadows Awakening,Rachel Usher,StMartinsPress,2092602529,Russian,69.01,1952-05-01,4,17
-64,Memory Serpent Kingdom,Peter James,SealPress,6315467121,Russian,126.58,1963-04-23,9,12
-68,Shadows Fate,Clara Underwood,StMartinsPress,7648462410,Russian,39.41,2014-02-16,11,15
-77,Heart Bound Rain,Jack White,Cambridge,7431150814,Russian,139.46,1966-03-29,5,10
-79,Dawn Lost,Clara Grant,AcornPress,6903645146,Russian,187.34,2018-06-06,5,13
-83,Whisper Veil,Taylor Edwards,StMartinsPress,9628096101,Russian,115.16,1918-01-31,6,10
-84,Infinity Lost,Owen Green,Zondervan,1816988367,Russian,156.56,1925-04-12,7,4
-88,Fire Secrets,Quinn Jackson,SealPress,2943547930,Russian,181.39,1993-05-18,5,4
-90,Bound Wings Shadows,Jack Evans,CityLights,6081123697,Russian,125.15,1919-06-30,5,9
-2,Serpent Journey,Xavier Davis,RegneryPublishing,4167991954,Russian,25.15,1926-11-29,5,7
-8,Legacy Truth,Gemma Oliver,Routledge,5834882127,Russian,188.35,1972-03-03,9,6
-18,Memory Silence,Grace Green,TorBooks,5557975382,Russian,69.43,1957-04-10,2,10
-28,Memory Silence Whisper,Benjamin Underwood,TyndaleHouse,4157799704,Russian,95.81,1960-06-16,9,10
-34,Truth Awakening,Ryan Zimmerman,SimonAndSchuster,7848082019,Russian,174.6,1930-09-23,3,18
-37,Awakening Storm Echoes,Clara Miller,Oxford,7710471623,Russian,29.95,1987-05-22,11,11
-50,Horizon Ashes Mirror,Ivy Yates,FlatironBooks,7581269162,Russian,25.58,2011-09-21,3,19
-59,Embrace Sins,Samuel Harris,Penguin,4694184938,Russian,55.35,1998-04-05,4,13
-60,Flame Serpent,Yvonne Xander,Routledge,2407374228,Russian,109.93,1943-09-08,10,4
-61,Ashes Shadows Awakening,Rachel Usher,StMartinsPress,2092602529,Russian,69.01,1952-05-01,4,17
-64,Memory Serpent Kingdom,Peter James,SealPress,6315467121,Russian,126.58,1963-04-23,9,12
-68,Shadows Fate,Clara Underwood,StMartinsPress,7648462410,Russian,39.41,2014-02-16,11,15
-77,Heart Bound Rain,Jack White,Cambridge,7431150814,Russian,139.46,1966-03-29,5,10
-79,Dawn Lost,Clara Grant,AcornPress,6903645146,Russian,187.34,2018-06-06,5,13
-83,Whisper Veil,Taylor Edwards,StMartinsPress,9628096101,Russian,115.16,1918-01-31,6,10
-84,Infinity Lost,Owen Green,Zondervan,1816988367,Russian,156.56,1925-04-12,7,4
-88,Fire Secrets,Quinn Jackson,SealPress,2943547930,Russian,181.39,1993-05-18,5,4
-90,Bound Wings Shadows,Jack Evans,CityLights,6081123697,Russian,125.15,1919-06-30,5,9
+4,Veins Rebirth Sins,Rachel Walker,AlgonquinBooks,3526823096,Russian,155.87,1935-02-21,8,12
+13,Light Lost Legacy,Finn Walker,Wiley,8755411011,Russian,54.92,1956-04-21,6,10
+19,Dawn Rising Ashes,Nathan Ingram,SimonAndSchuster,6117584048,Russian,199.32,1912-01-30,4,14
+24,Tempest Light Veins,Zachary Irving,Scholastic,9964325701,Russian,190.74,1908-08-05,11,6
+31,Betrayal Sins Memory,Noah Ingram,WorkmanPublishing,5449725544,Russian,176.06,1973-08-18,5,10
+35,Rising Blood Phoenix,Thomas Xander,Cambridge,4365129734,Russian,107.49,1988-03-18,10,13
+37,Fate Soul Dawn,Will Daniels,HarperCollins,7008280366,Russian,122.69,1911-05-28,5,16
+56,Lost Ashes,Hugo Xander,NewDirections,1963708901,Russian,163.52,1940-03-01,5,9
+63,Serpent Storm Ghosts,Zachary Daniels,LittleBrown,5910427503,Russian,190.09,2006-01-29,2,14
+65,Heart Fate,Olivia King,PenguinRandomHouse,6383959684,Russian,129.08,2015-12-20,5,10
+67,Rising Echo,Maria Zimmerman,KnopfDoubleday,7670898432,Russian,11.29,1993-11-05,5,15
+70,Veil Kingdom Rain,Quinn Lee,RegneryPublishing,8509447426,Russian,49.12,1901-09-02,4,20
+73,Dream Whisper,Ursula Edwards,AcornPress,2951319542,Russian,181.3,2020-01-09,10,20
+80,Sins Horizon Wings,Una Anderson,SealPress,8324160601,Russian,132.45,2022-02-15,10,11
+89,Light Thorns Fire,Thomas Parker,HarperCollins,2677133459,Russian,192.1,1942-10-20,4,11
+94,Rising Serpent Tempest,Nathan Taylor,ArcadePublishing,7105389873,Russian,45.24,2019-08-14,6,9
+96,Storm Legacy Storms,Lucas Newton,RandomHouse,5024854455,Russian,72.28,2014-11-11,1,4
+99,Serpent Echo,Daniel Xander,VikingPress,4764616078,Russian,178.51,2024-10-17,4,2
+101,Phoenix Path,Jake Xu,VikingPress,9957008568,Russian,160.46,1933-04-08,7,2

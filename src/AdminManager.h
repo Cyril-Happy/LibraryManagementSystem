@@ -24,6 +24,7 @@ public:
     void deleteBook();
     void searchBooks();
     void printBooks();
+    void viewBooks();
     void classifyByLanguage();
     void classifyByClassId();
     void organizeBooks();

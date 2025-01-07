@@ -1,23 +1,15 @@
 Book ID,Name,Author,Publish,ISBN,Language,Price,Pub Date,Class ID,Quantity
-4,Thorns Ashes,Eva Van Dyke,Doubleday,9950838411,Spanish,112.94,1987-06-14,4,7
-5,Ashes Infinity,Phoebe Walker,StMartinsPress,2237644190,English,186.36,1994-09-13,4,19
-45,Dawn Betrayal Rift,Isabella Yates,Routledge,4325293425,Spanish,114.93,1903-04-17,4,9
-59,Embrace Sins,Samuel Harris,Penguin,4694184938,Russian,55.35,1998-04-05,4,13
-61,Ashes Shadows Awakening,Rachel Usher,StMartinsPress,2092602529,Russian,69.01,1952-05-01,4,17
-70,Infinity Fire,Benjamin Adams,HaymarketBooks,6653274575,English,55.34,2003-03-26,4,9
-76,Rebirth Whisper Veins,Jack Van Dyke,SkyhorsePublishing,9867143059,English,180.18,1907-12-08,4,12
-82,Infinity Blood,Yvonne Smith,HarvardPress,4835857990,Spanish,197.43,1938-02-28,4,15
-97,Lost Silence,Eva Roberts,FlatironBooks,7550076483,English,180.61,1951-12-09,4,4
-99,Thorns Fire,Owen Foster,Scribner,4666310757,English,140.87,2006-08-03,4,9
-101,Lost Memory,Isabella Irving,UniversityPress,4445605560,Spanish,144.97,1918-05-05,4,7
-4,Thorns Ashes,Eva Van Dyke,Doubleday,9950838411,Spanish,112.94,1987-06-14,4,7
-5,Ashes Infinity,Phoebe Walker,StMartinsPress,2237644190,English,186.36,1994-09-13,4,19
-45,Dawn Betrayal Rift,Isabella Yates,Routledge,4325293425,Spanish,114.93,1903-04-17,4,9
-59,Embrace Sins,Samuel Harris,Penguin,4694184938,Russian,55.35,1998-04-05,4,13
-61,Ashes Shadows Awakening,Rachel Usher,StMartinsPress,2092602529,Russian,69.01,1952-05-01,4,17
-70,Infinity Fire,Benjamin Adams,HaymarketBooks,6653274575,English,55.34,2003-03-26,4,9
-76,Rebirth Whisper Veins,Jack Van Dyke,SkyhorsePublishing,9867143059,English,180.18,1907-12-08,4,12
-82,Infinity Blood,Yvonne Smith,HarvardPress,4835857990,Spanish,197.43,1938-02-28,4,15
-97,Lost Silence,Eva Roberts,FlatironBooks,7550076483,English,180.61,1951-12-09,4,4
-99,Thorns Fire,Owen Foster,Scribner,4666310757,English,140.87,2006-08-03,4,9
-101,Lost Memory,Isabella Irving,UniversityPress,4445605560,Spanish,144.97,1918-05-05,4,7
+5,Shadows Heart Soul,Quinn Newton,NewDirections,8048585493,French,79.52,1940-05-22,4,11
+18,Memory Nightfall,Nathan Lewis,PenguinRandomHouse,6986592728,French,138.61,2003-07-09,4,2
+19,Dawn Rising Ashes,Nathan Ingram,SimonAndSchuster,6117584048,Russian,199.32,1912-01-30,4,14
+29,Kingdom Ghosts Mirror,Olivia Harris,TarcherPerigee,3843073257,French,172.86,1943-12-11,4,12
+43,Whisper Rebirth Secrets,Lucas Roberts,Hachette,7655632522,Chinese,161.15,1916-03-21,4,14
+55,Embrace Thorns,Clara Evans,PenguinRandomHouse,3087050059,Spanish,18.19,2023-06-20,4,7
+68,Tempest Rain Journey,Zachary Richards,Doubleday,9435029188,Chinese,191.9,1920-03-20,4,19
+70,Veil Kingdom Rain,Quinn Lee,RegneryPublishing,8509447426,Russian,49.12,1901-09-02,4,20
+71,Heart Fire,Taylor Grant,BluebirdBooks,2739546180,Chinese,97.97,1964-05-08,4,14
+81,Storm Blood,Jack Richards,Doubleday,9216551586,French,110.29,2023-03-31,4,14
+89,Light Thorns Fire,Thomas Parker,HarperCollins,2677133459,Russian,192.1,1942-10-20,4,11
+92,Veil Memory,Clara Edwards,TarcherPerigee,6847763867,Spanish,135.49,1942-02-09,4,6
+98,Tempest Serpent Path,Ryan Kelly,FarrarStraus,2329475752,Chinese,175.48,1907-09-26,4,7
+99,Serpent Echo,Daniel Xander,VikingPress,4764616078,Russian,178.51,2024-10-17,4,2
