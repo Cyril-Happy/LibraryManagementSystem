@@ -28,8 +28,7 @@ void Menu::displayMainMenu()
             std::cout << "3. Delete Book (删除图书)" << std::endl;
             std::cout << "4. Search Books (搜索图书)" << std::endl;
             std::cout << "5. Print Books (打印所有图书信息)" << std::endl;
-            std::cout << "6. Print Users (打印所有用户信息)" << std::endl;
-            std::cout << "7. View Lend Logs (查看借还日志)" << std::endl;
+            std::cout << "6. View Lend Logs (查看借还日志)" << std::endl;
             std::cout << "0. Exit (退出)" << std::endl;
         }
         else
@@ -106,34 +105,22 @@ void Menu::switch_based_on_role(int &choice)
         {
             switch (choice)
             {
-            case 1:
+            case 1://logout
                 logout();
                 break;
-            case 2:
+            case 2://add book
                 adminManager.addBook();
                 break;
-            case 3:
+            case 3://delete book
                 adminManager.deleteBook();
                 break;
-            case 4:
+            case 4://search book
                 adminManager.searchBooks();
                 break;
-            case 5:
+            case 5://print book
                 adminManager.printBooks();
                 break;
-            // case 6:
-            //     adminManager.addReader();
-            //     break;
-            // case 7:
-            //     adminManager.deleteReader();
-            //     break;
-            // case 8:
-            //     adminManager.searchReaders();
-            //     break;
-            // case 9:
-            //     adminManager.printReaders();
-            //     break;
-            case 10:
+            case 6:
                 adminManager.viewLogs();
                 break;
             case 0:
@@ -158,19 +145,10 @@ void Menu::switch_based_on_role(int &choice)
                 adminManager.printBooks();
                 break;
             case 4:
-                // adminManager.searchReaders();
-                break;
-            case 5:
-                // adminManager.printReaders();
-                break;
-            case 6:
                 adminManager.lendBook();
                 break;
-            case 7:
+            case 5:
                 adminManager.returnBook();
-                break;
-            case 8:
-                adminManager.viewLogs();
                 break;
             case 0:
                 std::cout << "[info]Exiting..." << std::endl;
