@@ -28,6 +28,9 @@ public:
 
     // Loads data from file
     void loadData();
+
+    // Saves data to file
+    void saveData();
 };
 
 #endif

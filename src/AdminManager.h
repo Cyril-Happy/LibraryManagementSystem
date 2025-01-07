@@ -19,6 +19,7 @@ public:
 
     // Book management
     void loadBookData();
+    void saveBookData();
     void addBook();
     void deleteBook();
     void searchBooks();

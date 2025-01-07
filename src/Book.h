@@ -33,6 +33,26 @@ public:
     void inputInfo();
     long long getBookId() const;
     // Additional getters/setters can be defined if needed
+    std::string getName() const;
+    std::string getAuthor() const;
+    std::string getPublish() const;
+    std::string getISBN() const;
+    std::string getLanguage() const;
+    double getPrice() const;
+    std::string getPubDate() const;
+    int getClassId() const;
+    int getQuantity() const;
+    void setName(const std::string &name);
+    void setAuthor(const std::string &author);
+    void setPublish(const std::string &publish);
+    void setISBN(const std::string &ISBN);
+    void setLanguage(const std::string &language);
+    void setPrice(double price);
+    void setPubDate(const std::string &pubDate);
+    void setClassId(int classId);
+    void setQuantity(int quantity);
+    
+
 };
 
 #endif

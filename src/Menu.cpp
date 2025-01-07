@@ -66,6 +66,7 @@ void Menu::logout()
     isLoggedIn = false;
     isAdmin = false;
     std::cout << "Logged out." << std::endl;
+
 }
 void Menu::switch_based_on_role(int &choice)
 {

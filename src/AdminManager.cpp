@@ -14,6 +14,11 @@ void AdminManager::loadBookData()
 {
     bookManager.loadData();
 }
+
+void AdminManager::saveBookData()
+{
+    bookManager.saveData();
+}
 void AdminManager::addBook()
 {
     bookManager.addBook();
@@ -31,7 +36,8 @@ void AdminManager::deleteBook()
 
 void AdminManager::searchBooks()
 {
-    std::cout << "Enter keyword to search in book ID: ";
+    // search by book name
+    std::cout << "Enter keyword to search in book name: ";
     std::string keyword;
     std::cin >> keyword;
     bookManager.searchBooks(keyword);

@@ -46,6 +46,98 @@ long long Book::getBookId() const
     return book_id;
 }
 
+std::string Book::getName() const
+{
+    return name;
+}
+
+std::string Book::getAuthor() const
+{
+    return author;
+}
+
+std::string Book::getPublish() const
+{
+    return publish;
+}
+
+std::string Book::getISBN() const
+{
+    return ISBN;
+}
+
+std::string Book::getLanguage() const
+{
+    return language;
+}
+
+double Book::getPrice() const
+{
+    return price;
+}
+
+std::string Book::getPubDate() const
+{
+    return pub_date;
+}
+
+int Book::getClassId() const
+{
+    return class_id;
+}
+
+int Book::getQuantity() const
+{
+    return quantity;
+}
+
+void Book::setName(const std::string &n)
+{
+    name = n;
+}
+
+void Book::setAuthor(const std::string &a)
+{
+    author = a;
+}
+
+void Book::setPublish(const std::string &p)
+{
+    publish = p;
+}
+
+void Book::setISBN(const std::string &isbn)
+{
+    ISBN = isbn;
+}
+
+void Book::setLanguage(const std::string &lang)
+{
+    language = lang;
+}
+
+void Book::setPrice(double pr)
+{
+    price = pr;
+}
+
+void Book::setPubDate(const std::string &date)
+{
+    pub_date = date;
+}
+
+void Book::setClassId(int c_id)
+{
+    class_id = c_id;
+}
+
+void Book::setQuantity(int qty)
+{
+    quantity = qty;
+}
+
+
+
 void Book::inputInfo()
 {
     // book_id,name,author,publish,ISBN,language,price,pub_date,class_id,quantity
