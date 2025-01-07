@@ -28,7 +28,8 @@ void Menu::displayMainMenu()
             std::cout << "3. Delete Book (删除图书)" << std::endl;
             std::cout << "4. Search Books (搜索图书)" << std::endl;
             std::cout << "5. Find Books (查看所有图书信息)" << std::endl;
-            std::cout << "6. View Lend Logs (查看借还日志)" << std::endl;
+            std::cout << "6. Organize Books (整理图书)" << std::endl;
+            std::cout << "7. View Lend Logs (查看借还日志)" << std::endl;
             std::cout << "0. Exit (退出)" << std::endl;
         }
         else
@@ -121,6 +122,9 @@ void Menu::switch_based_on_role(int &choice)
                 adminManager.printBooks();
                 break;
             case 6:
+                adminManager.organizeBooks();
+                break;
+            case 7:
                 adminManager.viewLogs();
                 break;
             case 0:

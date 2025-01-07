@@ -1,0 +1,25 @@
+Book ID,Name,Author,Publish,ISBN,Language,Price,Pub Date,Class ID,Quantity
+8,Legacy Truth,Gemma Oliver,Routledge,5834882127,Russian,188.35,1972-03-03,9,6
+15,Secrets Embrace,Jack Stevens,PlumeBooks,2756471044,French,197.55,2003-01-10,9,19
+25,Ghosts Veil Tempest,Grace Underwood,FarrarStraus,9503368217,English,107.86,1990-02-18,9,18
+28,Memory Silence Whisper,Benjamin Underwood,TyndaleHouse,4157799704,Russian,95.81,1960-06-16,9,10
+31,Shadows Awakening Legacy,Ava Yates,HoughtonMifflin,5012073375,Chinese,40.08,2004-02-23,9,20
+40,Embrace Storms Truth,Clara Quinn,Scribner,7611502832,French,62,1994-07-28,9,20
+48,Memory Rebirth,Quinn Oliver,StMartinsPress,5583049427,French,37.31,2024-10-12,9,2
+64,Memory Serpent Kingdom,Peter James,SealPress,6315467121,Russian,126.58,1963-04-23,9,12
+69,Dawn Truth,Quinn Newton,PlumeBooks,3904360365,Chinese,76.6,1952-10-03,9,6
+71,Storm Journey,Frederick O'Connor,WorkmanPublishing,6844375305,Chinese,168.3,1924-04-04,9,2
+75,Echoes Wings,Jake White,KnopfDoubleday,8481340840,English,180.23,2023-12-12,9,7
+87,Echoes Whisper,Xavier Harris,FarrarStraus,4552104900,Spanish,122.4,1929-10-30,9,14
+8,Legacy Truth,Gemma Oliver,Routledge,5834882127,Russian,188.35,1972-03-03,9,6
+15,Secrets Embrace,Jack Stevens,PlumeBooks,2756471044,French,197.55,2003-01-10,9,19
+25,Ghosts Veil Tempest,Grace Underwood,FarrarStraus,9503368217,English,107.86,1990-02-18,9,18
+28,Memory Silence Whisper,Benjamin Underwood,TyndaleHouse,4157799704,Russian,95.81,1960-06-16,9,10
+31,Shadows Awakening Legacy,Ava Yates,HoughtonMifflin,5012073375,Chinese,40.08,2004-02-23,9,20
+40,Embrace Storms Truth,Clara Quinn,Scribner,7611502832,French,62,1994-07-28,9,20
+48,Memory Rebirth,Quinn Oliver,StMartinsPress,5583049427,French,37.31,2024-10-12,9,2
+64,Memory Serpent Kingdom,Peter James,SealPress,6315467121,Russian,126.58,1963-04-23,9,12
+69,Dawn Truth,Quinn Newton,PlumeBooks,3904360365,Chinese,76.6,1952-10-03,9,6
+71,Storm Journey,Frederick O'Connor,WorkmanPublishing,6844375305,Chinese,168.3,1924-04-04,9,2
+75,Echoes Wings,Jake White,KnopfDoubleday,8481340840,English,180.23,2023-12-12,9,7
+87,Echoes Whisper,Xavier Harris,FarrarStraus,4552104900,Spanish,122.4,1929-10-30,9,14

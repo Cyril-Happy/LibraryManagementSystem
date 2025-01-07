@@ -6,8 +6,10 @@
 #include "Book.h" // Book.h include printBookHeader() and printLine()
 #include <algorithm>
 #include <vector>
+#include <unordered_map>
 using namespace std;
 // Print a line , its length is equal to the width of the table
+// create mapping manually
 
 BookManager::BookManager()
 {
@@ -141,9 +143,10 @@ void BookManager::loadData()
         cout << "[info]No book records loaded." << endl;
 }
 
-void BookManager::saveData()
+void BookManager::saveData(string filename, vector<Book> books)
 {
-    ofstream file("../data/books.csv");
+    ofstream file(filename);
+    // ofstream file("../data/books.csv");
     if (!file.is_open())
     {
         cerr << "Error: Could not open file" << endl;
@@ -249,7 +252,8 @@ vector<Book> BookManager::searchBooks(int searchType, const string &keyword)
          { return a.second < b.second; });
     for (auto &book : bookDistances)
     {
-        if(book.second>=4)foundBooks.push_back(book.first);
+        if (book.second >= 4)
+            foundBooks.push_back(book.first);
     }
     return foundBooks;
 }
@@ -262,5 +266,74 @@ void BookManager::printBooks()
     {
         book.displayBookData();
         printLine();
+    }
+}
+
+vector<Book> BookManager::getBooks() const
+{
+    return books;
+}
+
+void BookManager::classifyByLanguage()
+{
+    unordered_map<string, vector<Book>> languageMap;
+    for (const auto &book : books)
+    {
+        languageMap[book.getLanguage()].push_back(book);
+    }
+    // save the books to different files based on language
+    for (const auto &pair : languageMap)
+    {
+        string filename = "../data/language/" + pair.first + ".csv";
+        // if the language folder does not exist, create it
+        string folder = "../data/language/";
+        string command = "mkdir -p " + folder;
+        system(command.c_str()); // create the folder
+        saveData(filename, pair.second);
+        cout << "[info]Books saved to " << filename << endl;
+    }
+}
+/*
+class_id,class_name
+1,Fiction
+2,Poetry
+3,Drama
+4,Sociology
+5,Engineering
+6,Fine Arts
+7,Philosophy
+8,Travel Guides
+9,Biography
+10,Science Fiction
+*/
+void BookManager::classifyByClassId()
+{
+    unordered_map<int, string> classMap = {
+        {1, "Fiction"},
+        {2, "Poetry"},
+        {3, "Drama"},
+        {4, "Sociology"},
+        {5, "Engineering"},
+        {6, "Fine Arts"},
+        {7, "Philosophy"},
+        {8, "Travel Guides"},
+        {9, "Biography"},
+        {10, "Science Fiction"}};
+
+    unordered_map<int, vector<Book>> BookTypeMap;
+    for (const auto &book : books)
+    {
+        BookTypeMap[book.getClassId()].push_back(book);
+    }
+    // save the books to different files based on language
+    for (const auto &pair : BookTypeMap)
+    {
+        string filename = "../data/BookType/" + classMap[pair.first] + ".csv";
+        // if the language folder does not exist, create it
+        string folder = "../data/BookType/";
+        string command = "mkdir -p " + folder;
+        system(command.c_str()); // create the folder
+        saveData(filename, pair.second);
+        cout << "[info]Books saved to " << filename << endl;
     }
 }

@@ -1,0 +1,31 @@
+Book ID,Name,Author,Publish,ISBN,Language,Price,Pub Date,Class ID,Quantity
+7,Secrets Whisper,Liam Edwards,Sourcebooks,3278466741,Chinese,173.42,1987-01-24,11,12
+13,Lost Shadows Betrayal,Victor Thompson,StMartinsPress,9066223408,French,34.45,1900-05-21,11,20
+14,Infinity Rain,Ava Taylor,Macmillan,5160296613,Chinese,75.89,1909-06-30,11,13
+20,Fire Silence,Ivy Ingram,Liveright,4560281931,Spanish,79.89,2021-08-25,11,4
+22,Path Heart Edge,Zachary Van Dyke,Knopf,1728920891,Chinese,179.94,1948-04-12,11,4
+30,Tempest Rain,Liam Edwards,Penguin,6546063196,Chinese,21.53,2015-06-21,11,18
+37,Awakening Storm Echoes,Clara Miller,Oxford,7710471623,Russian,29.95,1987-05-22,11,11
+43,Fire Lost Betrayal,Ursula Lewis,BeaconPress,8565864091,English,184.66,1953-05-11,11,3
+44,Betrayal Sins,Victor Brooks,Wiley,6382221233,French,17.31,2016-06-13,11,11
+68,Shadows Fate,Clara Underwood,StMartinsPress,7648462410,Russian,39.41,2014-02-16,11,15
+86,Whisper Phoenix,Kylie King,BluebirdBooks,2231654160,French,186.43,1914-03-05,11,16
+89,Truth Echoes,Una Anderson,AcornPress,2470250491,Spanish,147.77,1997-08-18,11,2
+92,Veil Lost,Alice Zimmerman,TyndaleHouse,4609205987,Chinese,85.53,1923-07-28,11,5
+93,Embrace Path,Kylie Young,RandomHouse,5455263257,Spanish,91.58,1929-07-13,11,14
+94,Path Embrace Awakening,Henry Nelson,Scribner,6728993598,French,178.61,2004-04-23,11,9
+7,Secrets Whisper,Liam Edwards,Sourcebooks,3278466741,Chinese,173.42,1987-01-24,11,12
+13,Lost Shadows Betrayal,Victor Thompson,StMartinsPress,9066223408,French,34.45,1900-05-21,11,20
+14,Infinity Rain,Ava Taylor,Macmillan,5160296613,Chinese,75.89,1909-06-30,11,13
+20,Fire Silence,Ivy Ingram,Liveright,4560281931,Spanish,79.89,2021-08-25,11,4
+22,Path Heart Edge,Zachary Van Dyke,Knopf,1728920891,Chinese,179.94,1948-04-12,11,4
+30,Tempest Rain,Liam Edwards,Penguin,6546063196,Chinese,21.53,2015-06-21,11,18
+37,Awakening Storm Echoes,Clara Miller,Oxford,7710471623,Russian,29.95,1987-05-22,11,11
+43,Fire Lost Betrayal,Ursula Lewis,BeaconPress,8565864091,English,184.66,1953-05-11,11,3
+44,Betrayal Sins,Victor Brooks,Wiley,6382221233,French,17.31,2016-06-13,11,11
+68,Shadows Fate,Clara Underwood,StMartinsPress,7648462410,Russian,39.41,2014-02-16,11,15
+86,Whisper Phoenix,Kylie King,BluebirdBooks,2231654160,French,186.43,1914-03-05,11,16
+89,Truth Echoes,Una Anderson,AcornPress,2470250491,Spanish,147.77,1997-08-18,11,2
+92,Veil Lost,Alice Zimmerman,TyndaleHouse,4609205987,Chinese,85.53,1923-07-28,11,5
+93,Embrace Path,Kylie Young,RandomHouse,5455263257,Spanish,91.58,1929-07-13,11,14
+94,Path Embrace Awakening,Henry Nelson,Scribner,6728993598,French,178.61,2004-04-23,11,9

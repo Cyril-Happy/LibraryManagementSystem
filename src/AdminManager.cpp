@@ -20,7 +20,7 @@ void AdminManager::loadBookData()
 
 void AdminManager::saveBookData()
 {
-    bookManager.saveData();
+    bookManager.saveData("../data/books.csv", bookManager.getBooks());
 }
 void AdminManager::addBook()
 {
@@ -129,4 +129,42 @@ void AdminManager::returnBook()
 User AdminManager::validateLogin(const long long &id, const std::string &password)
 {
     return userManager.validateLogin(id, password);
+}
+
+void AdminManager::classifyByLanguage()
+{
+    bookManager.classifyByLanguage();
+}
+
+void AdminManager::classifyByClassId()
+{
+    bookManager.classifyByClassId();
+}
+
+void AdminManager::organizeBooks()
+{
+    char choice;
+    do
+    {
+        std::cout << "[info]Organize books by: (1: language, 2: classId, q: quit): \n";
+        std::cin >> choice;
+        if (choice == '1')
+        {
+            classifyByLanguage();
+        }
+        else if (choice == '2')
+        {
+            classifyByClassId();
+        }
+        else if (choice == 'q')
+        {
+            std::cout << "[info]Quitting organize books." << std::endl;
+            break;
+        }
+        else
+        {
+            std::cout << "[info]Invalid choice." << std::endl;
+        }
+    }
+    while(choice != 'q');
 }

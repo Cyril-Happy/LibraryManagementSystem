@@ -24,6 +24,9 @@ public:
     void deleteBook();
     void searchBooks();
     void printBooks();
+    void classifyByLanguage();
+    void classifyByClassId();
+    void organizeBooks();
 
     // User management
    void loadUserData(); 

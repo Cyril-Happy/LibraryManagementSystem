@@ -5,9 +5,11 @@
 #include <string>
 #include "Book.h"
 using namespace std;
-class BookManager {
+class BookManager
+{
 private:
     std::vector<Book> books;
+
 public:
     BookManager();
     ~BookManager();
@@ -25,10 +27,14 @@ public:
     void printBooks();
 
     // Loads data from file
-    void loadData();
+    void loadDatad();
 
+    vector<Book> getBooks() const;
     // Saves data to file
-    void saveData();
+    void saveData(string filename, vector<Book> books);
+    // 
+    void classifyByLanguage();
+    void classifyByClassId();
 };
 
 #endif
