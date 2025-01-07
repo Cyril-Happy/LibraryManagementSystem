@@ -45,7 +45,7 @@ void AdminManager::searchBooks()
 {
     // choose search by book name or author
     std::vector<Book> foundBook;
-    std::cout << "[info]Search by book name or author? (1: name, 2: author, 3: book ID, 4: quit): ";
+    std::cout << "[info]Search by what? (1: name, 2: author, 3: book ID, 4:language, q: quit): ";
     int searchType;
     std::cin >> searchType;
     if (searchType == 1)
@@ -69,6 +69,13 @@ void AdminManager::searchBooks()
         std::cin >> keyword;
         foundBook = bookManager.searchBooks(searchType, std::to_string(keyword));
     }
+    else if (searchType == 4)
+    {
+        std::cout << "[info]Enter language of the book: \n";
+        std::string keyword;
+        std::cin >> keyword;
+        foundBook = bookManager.searchBooks(searchType, keyword);
+    }
     else if (searchType == 'q')
     {
         std::cout << "[info]Quitting search." << std::endl;
@@ -87,7 +94,7 @@ void AdminManager::searchBooks()
     {
         // print the top 10 books
         printBookHeader();
-        for (int i = 0; i < min((int)foundBook.size(), 10); i++)
+        for (int i = 0; i < min((int)foundBook.size(), 100); i++)
         {
             foundBook[i].displayBookData();
             printLine();

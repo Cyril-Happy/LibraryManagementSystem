@@ -46,11 +46,13 @@ int longestCommonSubsequence(const std::string &s1, const std::string &s2)
 }
 
 // Function to calculate Levenshtein distance (edit distance)
-int levenshteinDistance(const string &s1, const string &s2)
+int levenshteinDistance(string s1, string s2)
 {
     int len1 = s1.size();
     int len2 = s2.size();
-
+    // Case insensitive comparison
+    transform(s1.begin(), s1.end(), s1.begin(), ::tolower);
+    transform(s2.begin(), s2.end(), s2.begin(), ::tolower);
     // Create a matrix to store the distance between substrings
     vector<vector<int>> dp(len1 + 1, vector<int>(len2 + 1));
 
@@ -231,6 +233,11 @@ vector<Book> BookManager::searchBooks(int searchType, const string &keyword)
             if (book.getBookId() == stoll(keyword))
                 bookDistances.push_back({book, 0});
         }
+        else if (searchType == 4) // search by language
+        {
+            int distance = longestCommonSubsequence(keyword, book.getLanguage());
+            bookDistances.push_back({book, distance});
+        }
     }
     vector<Book> foundBooks;
     if (bookDistances.size() == 0)
@@ -242,7 +249,7 @@ vector<Book> BookManager::searchBooks(int searchType, const string &keyword)
          { return a.second < b.second; });
     for (auto &book : bookDistances)
     {
-        foundBooks.push_back(book.first);
+        if(book.second>=4)foundBooks.push_back(book.first);
     }
     return foundBooks;
 }
