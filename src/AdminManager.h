@@ -30,6 +30,7 @@ public:
     void deleteReader();
     void searchReaders();
     void printReaders();
+
     // Lend management
     void lendBook();
     void returnBook();

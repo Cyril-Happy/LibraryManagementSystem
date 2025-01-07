@@ -167,7 +167,7 @@ void BookManager::saveData()
 void BookManager::addBook()
 {
     Book book;
-    bool is_quit=book.inputInfo();
+    book.inputInfo();
     cout << "[info]Do you want to save the book? (y/n): ";
     char choice;
     cin >> choice;

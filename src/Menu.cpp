@@ -55,6 +55,7 @@ void Menu::login()
 {
     // In a real system, you would check username/password
     // Here we just set adminisLoggedIn to true
+    
     isLoggedIn = true;
     isAdmin = true;
     std::cout << "[info]Logged in successfully." << std::endl;
@@ -72,18 +73,19 @@ void Menu::switch_based_on_role(int &choice)
 {
     if (!isLoggedIn)
     {
-        switch (choice)
-        {
-        case 1:
-            login();
-            break;
-        case 0:
-            std::cout << "[info]Exiting..." << std::endl;
-            break;
-        default:
-            std::cout << "[info]Invalid choice." << std::endl;
-            break;
-        }
+       
+            switch (choice)
+            {
+            case 1:
+                login();
+                break;
+            case 0:
+                std::cout << "[info]Exiting..." << std::endl;
+                break;
+            default:
+                std::cout << "[info]Invalid choice." << std::endl;
+                break;
+            }
     }
     else
     {
@@ -168,8 +170,7 @@ void Menu::switch_based_on_role(int &choice)
     }
 }
 void Menu::run()
-{
-
+{  
     isAdmin = false;
     isLoggedIn = false;
     int choice = -1;
@@ -177,14 +178,13 @@ void Menu::run()
     {
         displayMainMenu();
         std::cout << "[info]Please choose an option: ";
-        std::cin >> choice;
-        if (std::cin.fail())
+        while (!(std::cin >> choice))
         {
-            // Clear error flags
+            // Clear the error flags
             std::cin.clear();
             // Discard invalid input
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            continue;
+            std::cout << "[error]Invalid input. Please enter a valid integer choice: ";
         }
         switch_based_on_role(choice);
         printLine();

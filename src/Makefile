@@ -20,7 +20,7 @@ SRCS = Admin.cpp \
        Menu.cpp \
        Reader.cpp \
        ReaderManager.cpp \
-       User.cpp
+       User.cpp\
 
 # Object files automatically derived from source files
 OBJS = $(SRCS:.cpp=.o)
