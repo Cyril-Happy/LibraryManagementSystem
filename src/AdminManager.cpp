@@ -1,6 +1,9 @@
 #include "AdminManager.h"
 #include <iostream>
+#include <vector>
 #include "Book.h"
+
+using namespace std;
 
 AdminManager::AdminManager()
 {
@@ -30,38 +33,41 @@ void AdminManager::deleteBook()
     long long bookId;
     std::cin >> bookId;
     // make sure to check if the book exists before deleting
-    bool is_book_found = bookManager.searchBooks(3,std::to_string(bookId));
-    if(is_book_found)bookManager.deleteBook(bookId);
-    else std::cout << "[info]Book not found." << std::endl;
+    std::vector<Book> foundBook = bookManager.searchBooks(3, std::to_string(bookId)); // 3 is search by book ID
+    if (foundBook.size() > 0)
+        bookManager.deleteBook(bookId);
+    else
+        std::cout << "[info]Book not found." << std::endl;
     std::cout << "[info]Book deletion attempt completed." << std::endl;
 }
 
 void AdminManager::searchBooks()
 {
     // choose search by book name or author
+    std::vector<Book> foundBook;
     std::cout << "[info]Search by book name or author? (1: name, 2: author, 3: book ID, q: quit): ";
     int searchType;
     std::cin >> searchType;
     if (searchType == 1)
     {
-        std::cout<<"[info]Enter name of the book: \n";
+        std::cout << "[info]Enter name of the book: \n";
         std::string keyword;
-        std::cin>>keyword;
-        bookManager.searchBooks(searchType,keyword);
+        std::cin >> keyword;
+        foundBook = bookManager.searchBooks(searchType, keyword);
     }
     else if (searchType == 2)
     {
-        std::cout<<"[info]Enter author of the book: \n";
+        std::cout << "[info]Enter author of the book: \n";
         std::string keyword;
-        std::cin>>keyword;
-        bookManager.searchBooks(searchType,keyword);
+        std::cin >> keyword;
+        foundBook = bookManager.searchBooks(searchType, keyword);
     }
     else if (searchType == 3)
     {
-        std::cout<<"[info]Enter book ID: \n";
+        std::cout << "[info]Enter book ID: \n";
         long long keyword;
-        std::cin>>keyword;
-        bookManager.searchBooks(searchType,std::to_string(keyword));
+        std::cin >> keyword;
+        foundBook = bookManager.searchBooks(searchType, std::to_string(keyword));
     }
     else if (searchType == 'q')
     {
@@ -71,9 +77,23 @@ void AdminManager::searchBooks()
     else
     {
         std::cout << "[info]Invalid search type." << std::endl;
+        return;
+    }
+    if (foundBook.size() == 0)
+    {
+        std::cout << "[info]No books found." << std::endl;
+    }
+    else
+    {
+        // print the top 10 books
+        printBookHeader();
+        for (int i = 0; i < min((int)foundBook.size(), 10); i++)
+        {
+            foundBook[i].displayBookData();
+            printLine();
+        }
     }
 }
-
 void AdminManager::printBooks()
 {
     bookManager.printBooks();
@@ -89,7 +109,8 @@ void AdminManager::addReader()
 }
 
 void AdminManager::deleteReader()
-{ std::cout << "[info]Enter reader ID to delete: ";
+{
+    std::cout << "[info]Enter reader ID to delete: ";
     long long readerId;
     std::cin >> readerId;
     readerManager.deleteReader(readerId);

@@ -4,7 +4,7 @@
 #include <vector>
 #include <string>
 #include "Book.h"
-
+using namespace std;
 class BookManager {
 private:
     std::vector<Book> books;
@@ -19,7 +19,7 @@ public:
     void deleteBook(long long bookId);
 
     // Searches books by keyword (for demonstration, only matches bookId as string)
-    bool searchBooks(int searchType, const std::string &keyword);
+    std::vector<Book> searchBooks(int searchType, const string &keyword);
 
     // Prints all book info
     void printBooks();

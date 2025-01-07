@@ -5,6 +5,7 @@
 #include <sstream>
 #include "Book.h" // Book.h include printBookHeader() and printLine()
 #include <algorithm>
+#include <vector>
 using namespace std;
 // Print a line , its length is equal to the width of the table
 
@@ -166,7 +167,7 @@ void BookManager::saveData()
 void BookManager::addBook()
 {
     Book book;
-    book.inputInfo();
+    bool is_quit=book.inputInfo();
     cout << "[info]Do you want to save the book? (y/n): ";
     char choice;
     cin >> choice;
@@ -185,10 +186,10 @@ void BookManager::deleteBook(long long bookId)
     {
         if (it->getBookId() == bookId)
         {
-            cout << "[info]Do you want to delete the book? (y/n): \n";
             printBookHeader();
             (*it).displayBookData();
             printLine();
+            cout << "[info]Do you want to delete the book? (y/n): \n";
             char choice;
             cin >> choice;
             if (choice == 'y')
@@ -209,7 +210,7 @@ void BookManager::deleteBook(long long bookId)
     }
 }
 
-bool BookManager::searchBooks(int searchType, const string &keyword)
+vector<Book> BookManager::searchBooks(int searchType, const string &keyword)
 {
     vector<pair<Book, int>> bookDistances;
     for (const auto &book : books)
@@ -231,21 +232,19 @@ bool BookManager::searchBooks(int searchType, const string &keyword)
                 bookDistances.push_back({book, 0});
         }
     }
+    vector<Book> foundBooks;
     if (bookDistances.size() == 0)
     {
         cout << "[info]No books found with the given keyword: " << keyword << endl;
-        return false;
+        return foundBooks;
     }
     sort(bookDistances.begin(), bookDistances.end(), [](const pair<Book, int> &a, const pair<Book, int> &b)
          { return a.second < b.second; });
-    // print the top 10 books
-    printBookHeader();
-    for (int i = 0; i <min((int)bookDistances.size(),10); i++)
+    for (auto &book : bookDistances)
     {
-        bookDistances[i].first.displayBookData();
-        printLine();
+        foundBooks.push_back(book.first);
     }
-    return true;
+    return foundBooks;
 }
 
 void BookManager::printBooks()

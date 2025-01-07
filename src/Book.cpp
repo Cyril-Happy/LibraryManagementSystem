@@ -190,7 +190,7 @@ void Book::inputInfo()
     {
         // display the book data
         std::cout << "The book data you entered is: " << std::endl;
-        
+
         printBookHeader();
         displayBookData();
         std::cout << "Do you want to change the data? (y/n): ";
