@@ -45,7 +45,7 @@ void AdminManager::searchBooks()
 {
     // choose search by book name or author
     std::vector<Book> foundBook;
-    std::cout << "[info]Search by book name or author? (1: name, 2: author, 3: book ID, q: quit): ";
+    std::cout << "[info]Search by book name or author? (1: name, 2: author, 3: book ID, 4: quit): ";
     int searchType;
     std::cin >> searchType;
     if (searchType == 1)
