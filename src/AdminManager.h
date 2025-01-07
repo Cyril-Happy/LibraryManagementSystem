@@ -2,15 +2,15 @@
 #define ADMINMANAGER_H
 
 #include "BookManager.h"
-#include "ReaderManager.h"
+#include "UserManager.h"
 #include "LendManager.h"
 
-// Manages admin functionalities such as book, reader, and lend management
+// Manages admin functionalities such as book, User, and lend management
 class AdminManager
 {
 private:
     BookManager bookManager;
-    ReaderManager readerManager;
+    UserManager userManager;
     LendManager lendManager;
 
 public:
@@ -25,12 +25,10 @@ public:
     void searchBooks();
     void printBooks();
 
-    // Reader management
-    void addReader();
-    void deleteReader();
-    void searchReaders();
-    void printReaders();
-
+    // User management
+   void loadUserData(); 
+   User validateLogin(const long long &id, const std::string &password);    
+   // prompt user to enter log in details
     // Lend management
     void lendBook();
     void returnBook();

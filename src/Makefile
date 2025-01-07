@@ -11,16 +11,14 @@ SHARED_LIB = libLibrarySystem.so
 EXECUTABLE = LibrarySystem
 
 # Source files
-SRCS = Admin.cpp \
-       AdminManager.cpp \
+SRCS = AdminManager.cpp \
        Book.cpp \
        BookManager.cpp \
        ClassInfo.cpp \
        LendManager.cpp \
        Menu.cpp \
-       Reader.cpp \
-       ReaderManager.cpp \
        User.cpp\
+	   UserManager.cpp \
 
 # Object files automatically derived from source files
 OBJS = $(SRCS:.cpp=.o)

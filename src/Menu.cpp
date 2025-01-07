@@ -28,11 +28,8 @@ void Menu::displayMainMenu()
             std::cout << "3. Delete Book (删除图书)" << std::endl;
             std::cout << "4. Search Books (搜索图书)" << std::endl;
             std::cout << "5. Print Books (打印所有图书信息)" << std::endl;
-            std::cout << "6. Add Reader (添加读者)" << std::endl;
-            std::cout << "7. Delete Reader (删除读者)" << std::endl;
-            std::cout << "8. Search Readers (搜索读者)" << std::endl;
-            std::cout << "9. Print Readers (打印所有读者信息)" << std::endl;
-            std::cout << "10. View Lend Logs (查看借还日志)" << std::endl;
+            std::cout << "6. Print Users (打印所有用户信息)" << std::endl;
+            std::cout << "7. View Lend Logs (查看借还日志)" << std::endl;
             std::cout << "0. Exit (退出)" << std::endl;
         }
         else
@@ -41,11 +38,8 @@ void Menu::displayMainMenu()
             std::cout << "1. Logout (退出登录)" << std::endl;
             std::cout << "2. Search Books (搜索图书)" << std::endl;
             std::cout << "3. Print Books (打印所有图书信息)" << std::endl;
-            std::cout << "4. Search Readers (搜索读者)" << std::endl;
-            std::cout << "5. Print Readers (打印所有读者信息)" << std::endl;
-            std::cout << "6. Lend Book (借书)" << std::endl;
-            std::cout << "7. Return Book (还书)" << std::endl;
-            std::cout << "8. View Lend Logs (查看借还日志)" << std::endl;
+            std::cout << "4. Lend Book (借书)" << std::endl;
+            std::cout << "5. Return Book (还书)" << std::endl;
             std::cout << "0. Exit (退出)" << std::endl;
         }
     }
@@ -55,11 +49,30 @@ void Menu::login()
 {
     // In a real system, you would check username/password
     // Here we just set adminisLoggedIn to true
-    
-    isLoggedIn = true;
-    isAdmin = true;
-    std::cout << "[info]Logged in successfully." << std::endl;
-    adminManager.loadBookData();
+
+    // enter user id
+    std::cout << "[info]Enter user ID: ";
+    long long userId;
+    std::cin >> userId;
+    // enter password
+    std::cout << "[info]Enter password: ";
+    std::string password;
+    std::cin >> password;
+    User user = adminManager.validateLogin(userId, password);
+    if (user.getUserId() == 0)
+    {
+        std::cout << "[info]Invalid login credentials." << std::endl;
+        isLoggedIn = false;
+    }
+    else
+    {
+        printLine();
+        std::cout << "[info]Logged in successfully." << std::endl;
+        std::cout << "[info]Welcome, " << user.getRole() << " " << user.getUsername() << "!" << std::endl;
+        isLoggedIn = true;
+        isAdmin = (user.getRole() == "admin");
+        adminManager.loadBookData();
+    }
 }
 
 void Menu::logout()
@@ -73,19 +86,19 @@ void Menu::switch_based_on_role(int &choice)
 {
     if (!isLoggedIn)
     {
-       
-            switch (choice)
-            {
-            case 1:
-                login();
-                break;
-            case 0:
-                std::cout << "[info]Exiting..." << std::endl;
-                break;
-            default:
-                std::cout << "[info]Invalid choice." << std::endl;
-                break;
-            }
+
+        switch (choice)
+        {
+        case 1:
+            login();
+            break;
+        case 0:
+            std::cout << "[info]Exiting..." << std::endl;
+            break;
+        default:
+            std::cout << "[info]Invalid choice." << std::endl;
+            break;
+        }
     }
     else
     {
@@ -108,18 +121,18 @@ void Menu::switch_based_on_role(int &choice)
             case 5:
                 adminManager.printBooks();
                 break;
-            case 6:
-                adminManager.addReader();
-                break;
-            case 7:
-                adminManager.deleteReader();
-                break;
-            case 8:
-                adminManager.searchReaders();
-                break;
-            case 9:
-                adminManager.printReaders();
-                break;
+            // case 6:
+            //     adminManager.addReader();
+            //     break;
+            // case 7:
+            //     adminManager.deleteReader();
+            //     break;
+            // case 8:
+            //     adminManager.searchReaders();
+            //     break;
+            // case 9:
+            //     adminManager.printReaders();
+            //     break;
             case 10:
                 adminManager.viewLogs();
                 break;
@@ -145,10 +158,10 @@ void Menu::switch_based_on_role(int &choice)
                 adminManager.printBooks();
                 break;
             case 4:
-                adminManager.searchReaders();
+                // adminManager.searchReaders();
                 break;
             case 5:
-                adminManager.printReaders();
+                // adminManager.printReaders();
                 break;
             case 6:
                 adminManager.lendBook();
@@ -170,7 +183,8 @@ void Menu::switch_based_on_role(int &choice)
     }
 }
 void Menu::run()
-{  
+{
+    adminManager.loadUserData();
     isAdmin = false;
     isLoggedIn = false;
     int choice = -1;

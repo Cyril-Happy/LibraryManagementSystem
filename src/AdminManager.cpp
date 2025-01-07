@@ -99,35 +99,9 @@ void AdminManager::printBooks()
     bookManager.printBooks();
 }
 
-void AdminManager::addReader()
+void AdminManager::loadUserData()
 {
-    // Example of adding a reader
-    readerManager.addReader(1, "Alice", "F", "2000-01-01",
-                            "Somewhere", "123456",
-                            "alice", "alice123");
-    std::cout << "[info]A new reader has been added successfully." << std::endl;
-}
-
-void AdminManager::deleteReader()
-{
-    std::cout << "[info]Enter reader ID to delete: ";
-    long long readerId;
-    std::cin >> readerId;
-    readerManager.deleteReader(readerId);
-    std::cout << "Reader deletion attempt completed." << std::endl;
-}
-
-void AdminManager::searchReaders()
-{
-    std::cout << "[info]Enter keyword to search in reader info: ";
-    std::string keyword;
-    std::cin >> keyword;
-    readerManager.searchReaders(keyword);
-}
-
-void AdminManager::printReaders()
-{
-    readerManager.printReaders();
+    userManager.loadUserData();
 }
 
 void AdminManager::viewLogs()
@@ -143,4 +117,9 @@ void AdminManager::returnBook()
 {
     // lendManager.returnBook(1, "2024-02-01");
     std::cout << "[info]Book return attempt completed." << std::endl;
+}
+
+User AdminManager::validateLogin(const long long &id, const std::string &password)
+{
+    return userManager.validateLogin(id, password);
 }

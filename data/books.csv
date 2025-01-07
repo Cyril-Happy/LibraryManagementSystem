@@ -1,4 +1,4 @@
-book_id,name,author,publish,ISBN,language,price,pub_date,class_id,quantity
+Book ID,Name,Author,Publish,ISBN,Language,Price,Pub Date,Class ID,Quantity
 2,Serpent Journey,Xavier Davis,RegneryPublishing,4167991954,Russian,25.15,1926-11-29,5,7
 3,Moon Rising,Gemma Fisher,PlumeBooks,5006870176,Spanish,49.79,1946-05-02,10,2
 4,Thorns Ashes,Eva Van Dyke,Doubleday,9950838411,Spanish,112.94,1987-06-14,4,7
@@ -37,7 +37,7 @@ book_id,name,author,publish,ISBN,language,price,pub_date,class_id,quantity
 37,Awakening Storm Echoes,Clara Miller,Oxford,7710471623,Russian,29.95,1987-05-22,11,11
 38,Edge Lost,Thomas Lewis,TorBooks,6707701030,French,114.86,1962-12-05,1,13
 39,Awakening Lost,Thomas Lee,TyndaleHouse,1925349355,Spanish,28.8,1960-04-09,6,15
-40,Embrace Storms Truth,Clara Quinn,Scribner,7611502832,French,62.0,1994-07-28,9,20
+40,Embrace Storms Truth,Clara Quinn,Scribner,7611502832,French,62,1994-07-28,9,20
 41,Wings Veil Truth,Rachel Richards,RandomHouse,8139562703,English,47.41,1937-06-25,5,4
 42,Serpent Betrayal,Jake Daniels,Pearson,6798075720,French,176.56,1996-09-19,6,5
 43,Fire Lost Betrayal,Ursula Lewis,BeaconPress,8565864091,English,184.66,1953-05-11,11,3
