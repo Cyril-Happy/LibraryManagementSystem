@@ -113,9 +113,9 @@ void AdminManager::loadUserData()
     userManager.loadUserData();
 }
 
-void AdminManager::viewLogs()
+void AdminManager::viewLendLogs()
 {
-    lendManager.viewLogs();
+    lendManager.viewLendLogs();
 }
 void AdminManager::lendBook()
 {
@@ -212,4 +212,9 @@ void AdminManager::viewBooks()
             std::cout << "[info]Invalid choice\n";
         }
     } while (choice != "q");
+}
+
+void AdminManager::loadLendLogs()
+{
+    lendManager.loadLendData();
 }

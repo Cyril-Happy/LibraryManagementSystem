@@ -36,7 +36,8 @@ public:
     // Lend management
     void lendBook();
     void returnBook();
-    void viewLogs();
+    void viewLendLogs();
+    void loadLendLogs();
 };
 
 #endif

@@ -72,6 +72,7 @@ void Menu::login()
         isLoggedIn = true;
         isAdmin = (user.getRole() == "admin");
         adminManager.loadBookData();
+        adminManager.loadLendLogs();
     }
 }
 
@@ -125,7 +126,7 @@ void Menu::switch_based_on_role(int &choice)
                 adminManager.organizeBooks();
                 break;
             case 7:
-                adminManager.viewLogs();
+                adminManager.viewLendLogs();
                 
                 break;
             case 0:

@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 
+using namespace std;
 // Records of borrowing
 struct LendList {
     long long ser_num;
@@ -22,7 +23,7 @@ private:
 public:
     LendManager();
     ~LendManager();
-
+    void loadLendData();
     // Adds a lend record
     void addLend(long long serNum, long long bID, long long rID,
                  const std::string &lendDate, const std::string &backDate);
@@ -31,7 +32,7 @@ public:
     void returnBook(long long serNum, const std::string &backDate);
 
     // Displays all lend logs
-    void viewLogs();
+    void viewLendLogs();
 };
 
 #endif
