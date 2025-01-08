@@ -2,7 +2,7 @@
 #include <iostream>
 #include <iomanip>
 #include <limits>
-// book_id,name,author,publish,ISBN,language,price,pub_date,class_id,quantity
+// book_id,name,author,publish,ISBN,language,price,pub_date,class,quantity
 
 // prototype for input validation functions
 using namespace std;
@@ -13,7 +13,7 @@ bool validatePositiveDoubleInput(double &input);
 bool validateNonEmptyString(std::string &input);
 void printLine()
 {
-    for (int i = 0; i < 165; i++)
+    for (int i = 0; i < 170; i++)
         cout << "-";
     cout << endl;
 }
@@ -28,23 +28,23 @@ void printBookHeader()
          << setw(15) << "Language"
          << setw(15) << "Price"
          << setw(15) << "Pub Date"
-         << setw(12) << "Class ID"
+         << setw(15) << "BookType"
          << setw(12) << "Quantity"
          << endl;
     printLine();
 }
 Book::Book()
     : book_id(0), name(""), author(""), publish(""), ISBN(""),
-      language(""), price(0.0), pub_date(""), class_id(0), quantity(0)
+      language(""), price(0.0), pub_date(""), bookType(""), quantity(0)
 {
 }
 
 Book::Book(long long id, const std::string &n, const std::string &a,
            const std::string &p, const std::string &isbn,
            const std::string &lang, double pr, const std::string &date,
-           int c_id, int qty)
+           const std::string &btype, int qty)
     : book_id(id), name(n), author(a), publish(p), ISBN(isbn),
-      language(lang), price(pr), pub_date(date), class_id(c_id), quantity(qty)
+      language(lang), price(pr), pub_date(date), bookType(btype), quantity(qty)
 {
 }
 
@@ -55,7 +55,7 @@ Book::~Book()
 void Book::displayBookData()
 {
     // in table format
-    // book_id,name,author,publish,ISBN,language,price,pub_date,class_id,quantity
+    // book_id,name,author,publish,ISBN,language,price,pub_date,class,quantity
     // Printing the datalk
     std::cout << std::setw(5) << book_id
               << std::setw(30) << name
@@ -65,7 +65,7 @@ void Book::displayBookData()
               << std::setw(15) << language
               << std::setw(15) << price
               << std::setw(15) << pub_date
-              << std::setw(12) << class_id
+              << std::setw(15) << bookType
               << std::setw(12) << quantity
               << std::endl;
 }
@@ -110,9 +110,9 @@ std::string Book::getPubDate() const
     return pub_date;
 }
 
-int Book::getClassId() const
+std::string Book::getBookType() const
 {
-    return class_id;
+    return bookType;
 }
 
 int Book::getQuantity() const
@@ -130,7 +130,7 @@ void Book::modifyBook(Book &book)
               << "6. Language\t"
               << "7. Price\t"
               << "8. Publication Date\t"
-              << "9. Class ID\t"
+              << "9. BooktType\t"
               << "a. Quantity\t"
               << "q. Quit\n";
     char choice;
@@ -163,7 +163,7 @@ void Book::modifyBook(Book &book)
         setPubDateFromInput();
         break;
     case '9':
-        setClassIdFromInput();
+        setBookTypeFromInput();
         break;
     case 'a':
         setQuantityFromInput();
@@ -174,7 +174,7 @@ void Book::modifyBook(Book &book)
 }
 void Book::inputInfo()
 {
-    // book_id,name,author,publish,ISBN,language,price,pub_date,class_id,quantity
+    // book_id,name,author,publish,ISBN,language,price,pub_date,class,quantity
     setBookIdFromInput();
     setNameFromInput();
     setAuthorFromInput();
@@ -183,7 +183,7 @@ void Book::inputInfo()
     setLanguageFromInput();
     setPriceFromInput();
     setPubDateFromInput();
-    setClassIdFromInput();
+    setBookTypeFromInput();
     setQuantityFromInput();
     char choice;
     do
@@ -313,12 +313,12 @@ void Book::setPubDateFromInput()
     }
 }
 
-void Book::setClassIdFromInput()
+void Book::setBookTypeFromInput()
 {
-    std::cout << "Enter class ID: ";
-    while (!validatePositiveInput(class_id))
+    std::cout << "Enter BookType: ";
+    while (!validateNonEmptyString(bookType))
     {
-        std::cout << "Enter class ID: ";
+        std::cout << "Enter BookType: ";
     }
 }
 

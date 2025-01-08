@@ -39,9 +39,9 @@ public:
     void saveData(string filename, vector<Book> books);
     // 
     void classifyByLanguage();
-    void classifyByClassId();
+    void classifyByBookType();
     void viewBooksClassifiedByLanguage();
-    void viewBooksClassifiedByClassId();
+    void viewBooksClassifiedByBookType();
 };
 
 #endif

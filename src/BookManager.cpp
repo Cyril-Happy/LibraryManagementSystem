@@ -37,7 +37,7 @@ void BookManager::saveData(string filename, vector<Book> books)
         return;
     }
 
-    file << "Book ID,Name,Author,Publish,ISBN,Language,Price,Pub Date,Class ID,Quantity" << endl;
+    file << "Book ID,Name,Author,Publish,ISBN,Language,Price,Pub Date,Class,Quantity" << endl;
     for (const auto &book : books)
     {
         file << book.getBookId() << ","
@@ -48,7 +48,7 @@ void BookManager::saveData(string filename, vector<Book> books)
              << book.getLanguage() << ","
              << book.getPrice() << ","
              << book.getPubDate() << ","
-             << book.getClassId() << ","
+             << book.getBookType() << ","
              << book.getQuantity() << endl;
     }
     cout << "[info]Successfully saved " << books.size() << " book records." << endl;
@@ -77,7 +77,6 @@ void BookManager::deleteBook(long long bookId)
         {
             printBookHeader();
             (*it).displayBookData();
-            printLine();
             cout << "[info]Do you want to delete the book? (y/n): \n";
             char choice;
             cin >> choice;
@@ -118,12 +117,10 @@ vector<Book> BookManager::searchBooks(int searchType, const string &keyword)
         else if (searchType == 3) // search by bookId
         {
             if (book.getBookId() == stoll(keyword))
-                bookDistances.push_back({book, 0});
-        }
-        else if (searchType == 4) // search by language
-        {
-            int distance = longestCommonSubsequence(keyword, book.getLanguage());
-            bookDistances.push_back({book, distance});
+            {
+                bookDistances.push_back({book, 4});
+                break;
+            };
         }
     }
     vector<Book> foundBooks;
@@ -184,29 +181,27 @@ class_id,class_name
 9,Biography
 10,Science Fiction
 */
-void BookManager::classifyByClassId()
+void BookManager::classifyByBookType()
 {
     vector<string> BookTypes = extract_strings_from_file("../data/book_types.dat");
-    unordered_map<int, string> classMap;
-    int id = 1;
-    for (const auto &type : BookTypes)
-    {
-        classMap[id++] = type;
-    }
-    unordered_map<int, vector<Book>> BookTypeMap;
-    for (const auto &book : books)
-    {
-        BookTypeMap[book.getClassId()].push_back(book);
-    }
+
     // save the books to different files based on language
-    for (const auto &pair : BookTypeMap)
+    for (const auto &bookType : BookTypes)
     {
-        string filename = "../data/BookType/" + classMap[pair.first] + ".csv";
+        string filename = "../data/BookType/" + bookType + ".csv";
         // if the language folder does not exist, create it
         string folder = "../data/BookType/";
         string command = "mkdir -p " + folder;
         system(command.c_str()); // create the folder
-        saveData(filename, pair.second);
+        vector<Book> booksOfType;
+        for (const auto &book : books)
+        {
+            if (book.getBookType() == bookType)
+            {
+                booksOfType.push_back(book);
+            }
+        }
+        saveData(filename, booksOfType);
         cout << "[info]Books saved to " << filename << endl;
     }
 }
@@ -220,18 +215,22 @@ void BookManager::viewBooksClassifiedByLanguage()
     do
     {
 
+        cout<< "[info]Available Languages: ";
         for (auto &lang : available_languages)
         {
             printf("[%s] ", lang.c_str());
         }
         cout << '\n';
-        cout << "[info]Enter the language you want to view: ";
-        cout << "Enter <q> to quit\n"
+        cout << "[info]Enter the language you want to view: \n";
+        cout << "[info]Enter <q> to quit\n"
              << endl;
         cin >> language;
         if (language == "q")
             return;
+        available_languages.push_back("Quit");
         language = correctInput(language, available_languages);
+        if (language == "quit")
+            return;
         cout << "[info]You selected: " << language << endl;
         if (language == "")
         {
@@ -246,45 +245,49 @@ void BookManager::viewBooksClassifiedByLanguage()
     } while (language == "");
 }
 
-void BookManager::viewBooksClassifiedByClassId()
+void BookManager::viewBooksClassifiedByBookType()
 {
     string filename = "../data/book_types.dat";
-    vector<string> available_classes = extract_strings_from_file(filename);
+    vector<string> available_bookTypes = extract_strings_from_file(filename);
     // for(auto &class_name:available_classes){
     //     cout<<class_name<<endl;
     // }
-    string class_name;
+    string bookType;
     do
     {
-        for (auto &class_name : available_classes)
+        cout << "[info]Available BookType: ";
+        for (auto &item : available_bookTypes)
         {
-            printf("[%s] ", class_name.c_str());
+            printf("[%s] ", item.c_str());
         }
         cout << '\n';
         cout << "[info]Enter the class name you want to view: \n";
         cout << "[info]Enter <q> to quit\n"
              << endl;
 
-        cin >> class_name;
-        if (class_name == "q")
+        cin >> bookType;
+        if (bookType == "q")
             return;
-        class_name = correctInput(class_name, available_classes);
-        cout << "[info]You selected: " << class_name << endl;
-        if (class_name == "")
+        available_bookTypes.push_back("quit");
+        bookType = correctInput(bookType, available_bookTypes);
+        if (bookType == "quit")
+            return;
+        cout << "[info]You selected: " << bookType << endl;
+        if (bookType == "")
         {
             cout << "[info]Invalid class name." << endl;
         }
-        string filename = "../data/BookType/" + class_name + ".csv";
+        string filename = "../data/BookType/" + bookType + ".csv";
         // cout<<"[info]Reading from file: "<<filename<<endl;
         vector<Book> extracted_books = extract_books_from_file(filename);
         if (extracted_books.size() == 0)
-            cout << "[info]No books found in the class " << class_name << endl;
+            cout << "[info]No books found in the class " << bookType << endl;
         else
             displayBooks(extracted_books);
         std::cout << "[info]Hit <enter> to continue...";
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         std::cin.get();
-    } while (class_name == "");
+    } while (bookType == "");
 }
 
 // Helper functions
@@ -301,6 +304,11 @@ string correctInput(string input, vector<string> options)
     if (scores.size() == 0)
         return "";
     sort(scores.begin(), scores.end(), greater<pair<int, string>>()); // sort in descending order
+    if (scores[0].first == scores[1].first)
+    {
+        printf("[info] Confusing option. Do you mean [%s] or [%s]?\n", scores[0].second.c_str(), scores[1].second.c_str());
+        return "";
+    }
     return scores[0].second;
 }
 // Function to calculate the Longest Common Subsequence (LCS) length
@@ -385,10 +393,10 @@ vector<Book> extract_books_from_file(string filename) // The returned vector may
             string language = tokens[5];
             double price = stod(tokens[6]);
             string pubDate = tokens[7];
-            int classId = stoi(tokens[8]);
+            string bookType = tokens[8];
             int quantity = stoi(tokens[9]);
 
-            Book book(bookId, name, author, publish, ISBN, language, price, pubDate, classId, quantity);
+            Book book(bookId, name, author, publish, ISBN, language, price, pubDate, bookType, quantity);
             extracted_books.push_back(book);
             recordCount++;
         }

@@ -26,7 +26,7 @@ public:
     void printBooks();
     void viewBooks();
     void classifyByLanguage();
-    void classifyByClassId();
+    void classifyByBookType();
     void organizeBooks();
 
     // User management

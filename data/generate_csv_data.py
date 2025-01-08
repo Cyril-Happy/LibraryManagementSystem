@@ -9,7 +9,7 @@ last_names = last_names["Last Name"].tolist()
 first_names = pd.read_csv("first_names.dat", header=None, names=["First Name"])
 first_names = first_names["First Name"].tolist()
 
-book_types = pd.read_csv("book_types.txt", header=None, names=["Book Type"])
+book_types = pd.read_csv("book_types.dat", header=None, names=["Book Type"])
 book_types = book_types["Book Type"].tolist()
 
 publishers_names = pd.read_csv("publishers.dat", header=None, names=["Publisher"])
@@ -49,21 +49,13 @@ def generate_books_csv(n):
             "language": random.choice(languages),
             "price": round(random.uniform(10, 200), 2),
             "pub_date": random_date("1900-01-01", "2025-01-01"),
-            "class_id": random.randint(1, len(book_types) + 1),
+            "class": random.choice(book_types),
             "quantity": random.randint(1, 20),
         }
         for i in range(1, n + 1)
     ]
     df = pd.DataFrame(books_data)
     df.to_csv("books.csv", index=False)
-
-
-def generate_class_info_csv():
-    class_info_data = [
-        {"class_id": i + 1, "class_name": book_types[i]} for i in range(len(book_types))
-    ]
-    class_info_df = pd.DataFrame(class_info_data)
-    class_info_df.to_csv("class_info.csv", index=False)
 
 
 def generate_users_csv(n):
@@ -98,4 +90,3 @@ def generate_rentals_csv(n):
 generate_books_csv(100)
 generate_users_csv(100)
 generate_rentals_csv(100)
-generate_class_info_csv()

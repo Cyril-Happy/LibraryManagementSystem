@@ -16,7 +16,7 @@ private:
     std::string language;
     double price;
     std::string pub_date;
-    int class_id;
+    std::string bookType;
     int quantity; // inventory
 
 public:
@@ -24,7 +24,7 @@ public:
     Book(long long id, const std::string &name, const std::string &author,
          const std::string &publish, const std::string &ISBN,
          const std::string &lang, double price,
-         const std::string &date, int classID, int quantity);
+         const std::string &date,const std::string &bookType, int quantity);
     ~Book();
 
     // Displays detailed info of the book
@@ -42,7 +42,7 @@ public:
     std::string getLanguage() const;
     double getPrice() const;
     std::string getPubDate() const;
-    int getClassId() const;
+    std::string getBookType() const;
     int getQuantity() const;
     
     // modify book info
@@ -55,7 +55,7 @@ public:
     void setLanguageFromInput();
     void setPriceFromInput();
     void setPubDateFromInput();
-    void setClassIdFromInput();
+    void setBookTypeFromInput();
     void setQuantityFromInput();
 
 

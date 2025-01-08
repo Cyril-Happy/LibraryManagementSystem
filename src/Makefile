@@ -39,8 +39,11 @@ $(EXECUTABLE): main.o $(SHARED_LIB)
 	$(CXX) main.o -L. -lLibrarySystem -o $(EXECUTABLE) $(LIBS)
 
 # Clean rule to remove generated files
+# Remove languages/*.csv and BookType/.csv
 clean:
 	rm -f $(OBJS) main.o $(EXECUTABLE) $(SHARED_LIB)
+	rm -f ../data/language/*.csv 
+	rm -f ../data/BookType/*.csv
 
 # Phony targets
 .PHONY: all clean

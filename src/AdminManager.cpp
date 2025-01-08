@@ -46,62 +46,62 @@ void AdminManager::deleteBook()
 void AdminManager::searchBooks()
 {
     // choose search by book name or author
-    std::vector<Book> foundBook;
-    std::cout << "[info]Search by what? (1: name, 2: author, 3: book ID, 4:language, q: quit): ";
-    int searchType;
-    std::cin >> searchType;
-    if (searchType == 1)
+    std::string searchType;
+    do
     {
-        std::cout << "[info]Enter name of the book: \n";
-        std::string keyword;
-        std::cin >> keyword;
-        foundBook = bookManager.searchBooks(searchType, keyword);
-    }
-    else if (searchType == 2)
-    {
-        std::cout << "[info]Enter author of the book: \n";
-        std::string keyword;
-        std::cin >> keyword;
-        foundBook = bookManager.searchBooks(searchType, keyword);
-    }
-    else if (searchType == 3)
-    {
-        std::cout << "[info]Enter book ID: \n";
-        long long keyword;
-        std::cin >> keyword;
-        foundBook = bookManager.searchBooks(searchType, std::to_string(keyword));
-    }
-    else if (searchType == 4)
-    {
-        std::cout << "[info]Enter language of the book: \n";
-        std::string keyword;
-        std::cin >> keyword;
-        foundBook = bookManager.searchBooks(searchType, keyword);
-    }
-    else if (searchType == 'q')
-    {
-        std::cout << "[info]Quitting search." << std::endl;
-        return;
-    }
-    else
-    {
-        std::cout << "[info]Invalid search type." << std::endl;
-        return;
-    }
-    if (foundBook.size() == 0)
-    {
-        std::cout << "[info]No books found." << std::endl;
-    }
-    else
-    {
-        // print the top 10 books
-        printBookHeader();
-        for (int i = 0; i < min((int)foundBook.size(), 100); i++)
+        std::vector<Book> foundBook;
+        std::cout << "[info]You can enter the [number] or [the name of the option]\n";
+        std::cout << "[info]Search by what? (1: name, 2: author, 3: book ID, q: quit): ";
+        std::cin >> searchType;
+        if (searchType.size() != 1)
+            searchType = correctInput(searchType, {"name", "author", "book ID", "quit"});
+        printf("[info]You selected: [%s]\n", searchType.c_str());
+        if (searchType == "1" || searchType == "name")
         {
-            foundBook[i].displayBookData();
-            printLine();
+            std::cout << "[info]Enter name of the book: \n";
+            std::string keyword;
+            std::cin >> keyword;
+            foundBook = bookManager.searchBooks(1, keyword);
         }
-    }
+        else if (searchType == "2" || searchType == "author")
+        {
+            std::cout << "[info]Enter author of the book: \n";
+            std::string keyword;
+            std::cin >> keyword;
+            foundBook = bookManager.searchBooks(2, keyword);
+        }
+        else if (searchType == "3" || searchType == "book ID")
+        {
+            std::cout << "[info]Enter book ID: \n";
+            long long keyword;
+            std::cin >> keyword;
+            foundBook = bookManager.searchBooks(3, std::to_string(keyword));
+        }
+        else if (searchType == "q" || searchType == "quit")
+        {
+            std::cout << "[info]Quitting search." << std::endl;
+            return;
+        }
+        else
+        {
+            std::cout << "[info]Invalid search type." << std::endl;
+        }
+        if (foundBook.size() == 0)
+        {
+            std::cout << "[info]No books found." << std::endl;
+        }
+        else
+        {
+            // print the top 10 books
+            printBookHeader();
+            for (int i = 0; i < min((int)foundBook.size(), 100); i++)
+            {
+                foundBook[i].displayBookData();
+                printLine();
+            }
+        }
+        printLine();
+    } while (searchType != "q" || searchType != "quit");
 }
 void AdminManager::printBooks()
 {
@@ -138,9 +138,9 @@ void AdminManager::classifyByLanguage()
     bookManager.classifyByLanguage();
 }
 
-void AdminManager::classifyByClassId()
+void AdminManager::classifyByBookType()
 {
-    bookManager.classifyByClassId();
+    bookManager.classifyByBookType();
 }
 
 void AdminManager::organizeBooks()
@@ -149,16 +149,17 @@ void AdminManager::organizeBooks()
     do
     {
         std::cout << "[info]You can enter the [number] or [the name of the option]\n";
-        std::cout << "[info]Classify books by: (1: language, 2: classId, q: quit): \n";
+        std::cout << "[info]Classify books by: (1: language, 2: bookType, q: quit): \n";
         std::cin >> choice;
-        if(choice.size()!=1)choice = correctInput(choice, {"language", "classId", "quit"});
+        if (choice.size() != 1)
+            choice = correctInput(choice, {"language", "bookType", "quit"});
         if (choice == "1" || choice == "language")
         {
             classifyByLanguage();
         }
-        else if (choice == "2" || choice == "classId")
+        else if (choice == "2" || choice == "bookType")
         {
-            classifyByClassId();
+            classifyByBookType();
         }
         else if (choice == "q" || choice == "quit")
         {
@@ -176,21 +177,24 @@ void AdminManager::viewBooks()
     string choice;
     do
     {
+        printLine();
         std::cout << "[info]Enter the option to view books by: \n";
         std::cout << "[info]You can enter the [number] or [the name of the option]\n";
         std::cout << "1. Language\n";
-        std::cout << "2. ClassId\n";
+        std::cout << "2. BookType\n";
         std::cout << "3. All Books\n";
-        std::cout << "Enter <q> to quit\n";
+        std::cout << "[info]Enter <q> to quit\n";
         std::cin >> choice;
-        if(choice.size()!=1)choice = correctInput(choice, {"Language", "ClassId", "All Books", "Quit"});
+        if (choice.size() != 1)
+            choice = correctInput(choice, {"Language", "BookType", "All Books", "Quit"});
+        std::cout<<"[info]You selected: "<<choice<<endl;
         if (choice == "1" || choice == "Language")
         {
             bookManager.viewBooksClassifiedByLanguage();
         }
-        else if (choice == "2" || choice == "ClassId")
+        else if (choice == "2" || choice == "BookType")
         {
-            bookManager.viewBooksClassifiedByClassId();
+            bookManager.viewBooksClassifiedByBookType();
         }
         else if (choice == "3" || choice == "All Books")
         {
@@ -198,12 +202,12 @@ void AdminManager::viewBooks()
         }
         else if (choice == "q" || choice == "Quit")
         {
-            std::cout << "Quitting view books\n";
+            std::cout << "[info]Quitting view books\n";
             return;
         }
         else
         {
-            std::cout << "Invalid choice\n";
+            std::cout << "[info]Invalid choice\n";
         }
     } while (choice != "q");
 }
