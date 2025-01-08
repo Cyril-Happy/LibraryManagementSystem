@@ -29,7 +29,7 @@ void BookManager::loadData()
 
 void BookManager::saveData(string filename, vector<Book> books)
 {
-    ofstream file(filename);
+    ofstream file(filename);// ofstream file is used to write data to a file
     // ofstream file("../data/books.csv");
     if (!file.is_open())
     {
