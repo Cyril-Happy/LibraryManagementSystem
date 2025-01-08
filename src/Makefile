@@ -14,7 +14,6 @@ EXECUTABLE = LibrarySystem
 SRCS = AdminManager.cpp \
        Book.cpp \
        BookManager.cpp \
-       ClassInfo.cpp \
        LendManager.cpp \
        Menu.cpp \
        User.cpp\
@@ -42,6 +41,8 @@ $(EXECUTABLE): main.o $(SHARED_LIB)
 # Remove languages/*.csv and BookType/.csv
 clean:
 	rm -f $(OBJS) main.o $(EXECUTABLE) $(SHARED_LIB)
+	
+clean_books:
 	rm -f ../data/language/*.csv 
 	rm -f ../data/BookType/*.csv
 

@@ -126,6 +126,7 @@ void Menu::switch_based_on_role(int &choice)
                 break;
             case 7:
                 adminManager.viewLogs();
+                
                 break;
             case 0:
                 std::cout << "[info]Exiting..." << std::endl;

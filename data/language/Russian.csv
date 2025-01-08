@@ -1,0 +1,25 @@
+Book ID,Name,Author,Publish,ISBN,Language,Price,Pub Date,Class,Quantity
+3,Truth Betrayal,Emma Brown,TorBooks,8464319465,Russian,164.95,1968-01-03,Poetry,11
+7,Nightfall Dawn,Zachary Davis,Penguin,7368210601,Russian,40.34,1941-04-23,Sociology,15
+10,Journey Embrace Horizon,Hugo O'Connor,StMartinsPress,8015938745,Russian,100.97,1971-03-26,Sociology,3
+12,Phoenix Sins Ashes,Isabella Hill,LittleBrown,3203690377,Russian,55.89,1957-06-09,Drama,15
+14,Truth Echoes Veins,Olivia Smith,TorBooks,7295548249,Russian,34.3,1991-04-11,Engineering,15
+25,Silence Whisper,Yvonne Campbell,Wiley,3646198813,Russian,57.43,1923-12-19,Biography,14
+28,Truth Path,Peter Walker,Pearson,7178941092,Russian,147.9,1962-03-30,Fine_Arts,4
+37,Mirror Whisper,Grace Davis,AcornPress,2107309698,Russian,36.05,1988-03-28,Fiction,13
+56,Ghosts Mirror Flame,Samuel Hill,UniversityPress,7222110764,Russian,195.81,1978-10-17,Sociology,13
+57,Rain Ashes Echo,Katie Underwood,VikingPress,1373454263,Russian,96.15,1947-12-07,Fiction,19
+63,Legacy Awakening Path,Rachel Smith,BerkleyBooks,4094323850,Russian,174.77,1936-01-14,Philosophy,8
+70,Fate Rift Soul,Charlotte Martin,KnopfDoubleday,4684273171,Russian,67.27,2010-04-10,Engineering,12
+71,Edge Secrets Dawn,Will Jackson,Knopf,9611698322,Russian,112.52,1952-08-26,Travel,20
+72,Rising Nightfall Veil,Jack Peterson,HoughtonMifflin,5569272834,Russian,74.08,1981-04-06,Engineering,5
+76,Betrayal Ghosts Bound,Ryan Foster,PlumeBooks,5030938972,Russian,139.9,1951-12-31,Engineering,6
+79,Echoes Blood Heart,Olivia Harris,RandomHouse,2084021154,Russian,36.21,1966-05-24,Biography,7
+82,Echoes Edge,Lucas Roberts,PenguinRandomHouse,6317822458,Russian,142.72,1964-12-11,Fine_Arts,10
+84,Horizon Sins,Violet Parker,Wiley,7571570743,Russian,193.42,1967-04-21,Engineering,10
+87,Journey Blood,Una Roberts,PrincetonPress,7456310876,Russian,170.81,2009-03-06,Fine_Arts,20
+89,Rain Flame,Liam Young,BluebirdBooks,7774478530,Russian,132.26,1977-02-12,Sociology,5
+90,Legacy Fate Moon,Olivia Jackson,HarvardPress,2755599212,Russian,11.45,2007-06-06,Fine_Arts,3
+94,Lost Dream,Ivy Roberts,Wiley,3282694240,Russian,10.13,2016-09-17,Science,4
+96,Flame Light Mirror,Lucas Lewis,LittleBrown,8113164741,Russian,169.85,1999-11-19,Engineering,20
+97,Nightfall Ashes,Maria Brown,TarcherPerigee,4563327099,Russian,50.5,1940-07-28,Philosophy,4

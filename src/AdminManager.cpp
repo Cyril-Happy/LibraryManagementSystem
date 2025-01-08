@@ -148,11 +148,13 @@ void AdminManager::organizeBooks()
     string choice;
     do
     {
+        printLine();
         std::cout << "[info]You can enter the [number] or [the name of the option]\n";
         std::cout << "[info]Classify books by: (1: language, 2: bookType, q: quit): \n";
         std::cin >> choice;
         if (choice.size() != 1)
             choice = correctInput(choice, {"language", "bookType", "quit"});
+        printf("[info]You selected: [%s]\n", choice.c_str());   
         if (choice == "1" || choice == "language")
         {
             classifyByLanguage();
@@ -170,7 +172,7 @@ void AdminManager::organizeBooks()
         {
             std::cout << "[info]Invalid choice." << std::endl;
         }
-    } while (choice != "q");
+    } while (choice != "q"||choice!="quit");
 }
 void AdminManager::viewBooks()
 {

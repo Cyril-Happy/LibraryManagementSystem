@@ -189,11 +189,11 @@ void Book::inputInfo()
     do
     {
         // display the book data
-        std::cout << "The book data you entered is: " << std::endl;
+        std::cout << "[info]The book data you entered is: " << std::endl;
 
         printBookHeader();
         displayBookData();
-        std::cout << "Do you want to change the data? (y/n): ";
+        std::cout << "[info]Do you want to change the data? (y/n): ";
         std::cin >> choice;
         if (choice == 'y')
         {
@@ -210,7 +210,7 @@ bool validatePositiveInput(T &input)
     {
         std::cin.clear();                                                   // Clear error flag
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Ignore invalid input
-        std::cout << "\nInvalid input. Please enter a positive number: ";
+        std::cout << "\n[info]Invalid input. Please enter a positive number: \n";
         return false;
     }
     return true;
@@ -224,7 +224,7 @@ bool validatePositiveDoubleInput(double &input)
     {
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Ignore invalid input in the buffer
-        std::cout << "\nInvalid input. Please enter a positive number: ";
+        std::cout << "\nInvalid input. Please enter a positive number: \n";
         return false;
     }
     return true;
@@ -236,7 +236,7 @@ bool validateNonEmptyString(std::string &input)
     std::cin >> input;
     if (input.empty())
     {
-        std::cout << "\nInput cannot be empty. Please try again: ";
+        std::cout << "\nInput cannot be empty. Please try again: \n";
         return false;
     }
     return true;
